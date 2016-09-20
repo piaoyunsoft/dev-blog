@@ -3,6 +3,11 @@
 [20160920](https://github.com/wuxueying/dev-blog/blob/master/20160920.md)
 
 ```
+1.You can try adding it manually in `~/.cocoapods/repos` or via `pod repo add`
+2.cycript获取app所有进程
+3.利用lldb调试iphone
+4.重签名命令
+5.把获取到的userId转成微信名字
 ```
 
 [20160901](https://github.com/wuxueying/dev-blog/blob/master/20160901.md)
