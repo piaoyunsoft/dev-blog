@@ -1,5 +1,15 @@
 # dev-blog
 
+[20160921](https://github.com/wuxueying/dev-blog/blob/master/20160921.md)
+
+```
+1.theos用usb连接时如何设置端口
+2.更简洁写markdown的工具
+3.'system' has been explicitly marked deprecated 
+4.重启SpringBoard
+5.安装ios app后没显示在桌面
+```
+
 [20160920](https://github.com/wuxueying/dev-blog/blob/master/20160920.md)
 
 ```
@@ -26,3 +36,5 @@
 4.命令行安装package control
 5.sublime中文显示乱码
 ```
+
+
