@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<!-- saved from url=(0042)http://www.blogfshare.com/ios-protect.html -->
+<html lang="zh-CN" class="hb-loaded"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>iOS安全–浅谈关于iOS加固的几种方法</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="template" content="Stargazer 1.1.1">
+
+<link rel="stylesheet" id="stargazer-fonts-css" href="./iOS安全–浅谈关于iOS加固的几种方法_files/css" type="text/css" media="all">
+<link rel="stylesheet" id="one-five-css" href="./iOS安全–浅谈关于iOS加固的几种方法_files/one-five.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="gallery-css" href="./iOS安全–浅谈关于iOS加固的几种方法_files/gallery.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="stargazer-mediaelement-css" href="./iOS安全–浅谈关于iOS加固的几种方法_files/mediaelement.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="parent-css" href="./iOS安全–浅谈关于iOS加固的几种方法_files/style.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="style-css" href="./iOS安全–浅谈关于iOS加固的几种方法_files/style.css" type="text/css" media="all">
+<link rel="stylesheet" id="wp-pagenavi-css" href="./iOS安全–浅谈关于iOS加固的几种方法_files/pagenavi-css.css" type="text/css" media="all">
+<link rel="stylesheet" id="googleFonts-css" href="./iOS安全–浅谈关于iOS加固的几种方法_files/css(1)" type="text/css" media="all">
+<link rel="stylesheet" id="codecolorer-css" href="./iOS安全–浅谈关于iOS加固的几种方法_files/codecolorer.css" type="text/css" media="screen">
+<script type="text/javascript" async="" src="./iOS安全–浅谈关于iOS加固的几种方法_files/bcgm"></script><script type="text/javascript" src="./iOS安全–浅谈关于iOS加固的几种方法_files/jquery.js"></script>
+<script type="text/javascript" src="./iOS安全–浅谈关于iOS加固的几种方法_files/jquery-migrate.min.js"></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.blogfshare.com/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://www.blogfshare.com/wp-includes/wlwmanifest.xml"> 
+<link rel="prev" title="Android安全–阿里移动安全挑战赛2014的第二题分析" href="http://www.blogfshare.com/ailibaba-crack02.html">
+<link rel="next" title="iOS安全–简单谈一谈XCodeGhost注入第三方代码的事" href="http://www.blogfshare.com/ios-xcodeghost.html">
+<link rel="stylesheet" href="./iOS安全–浅谈关于iOS加固的几种方法_files/zh-cn.css" type="text/css" media="screen"><link rel="canonical" href="http://www.blogfshare.com/ios-protect.html">
+<link rel="shortlink" href="http://www.blogfshare.com/?p=1555">
+
+<meta name="keywords" content="iOS安全">
+<meta name="description" content="关于IOS安全这方面呢，能做的安全保护确实要比Android平台下面能做的少很多。 只要你的手机没越狱，基本上来说是比较安全的，当然如果你的手机越狱了，可能也会相应的产生一些安全方面的问题。就比如我在前面几篇博客里面所介绍的一些IOS逆向分析，动态分析以及破解方法。 但是尽管这样，对IOS保护这方面来说，需求还不是很乏，所有基于IOS平台的加固产品也不是很多，目前看到几种关于IOS加固的产品也有做的比较好的。 最开始关于爱加密首创的IO..">
+
+<style type="text/css" id="custom-colors-css">a, .wp-playlist-light .wp-playlist-playing { color: rgba( 17, 17, 17, 0.75 ); } a:hover, legend, mark, .comment-respond .required, pre, .form-allowed-tags code, pre code, .wp-playlist-light .wp-playlist-item:hover, .mejs-button button:hover::after, .mejs-overlay-button:hover::after { color: #111111; } input[type='submit'], input[type='reset'], input[type='button'], button, .page-links a, .comment-reply-link, .comment-reply-login, .wp-calendar td.has-posts a, #menu-sub-terms li a { background-color: rgba( 17, 17, 17, 0.8 ); } legend, mark, pre, .form-allowed-tags code { background-color: rgba( 17, 17, 17, 0.1 ); } input[type='submit']:hover, input[type='submit']:focus, input[type='reset']:hover, input[type='reset']:focus, input[type='button']:hover, input[type='button']:focus, button:focus, button:hover,.page-links a:hover, .wp-calendar td.has-posts a:hover, .widget-title > .wrap,#comments-number > .wrap, #reply-title > .wrap, .attachment-meta-title > .wrap, .widget-search > .search-form, #menu-sub-terms li a:hover, .comment-reply-link:hover, .comment-reply-login:hover, .mejs-time-rail .mejs-time-loaded{ background-color: #111111; } ::selection { background-color: #111111; } legend { border-color: rgba( 17, 17, 17, 0.15 ); } body { border-top-color: #111111; } .entry-content a, .entry-summary a, .comment-content a { border-bottom-color: rgba( 17, 17, 17, 0.15 ); } .entry-content a:hover, .entry-summary a:hover, .comment-content a:hover { border-bottom-color: rgba( 17, 17, 17, 0.75 ); } body, .widget-title, #comments-number, #reply-title,.attachment-meta-title { border-bottom-color: #111111; } blockquote { background-color: rgba( 17, 17, 17, 0.85 ); } blockquote blockquote { background-color: rgba( 17, 17, 17, 0.9 ); } blockquote { outline-color: rgba( 17, 17, 17, 0.85); }</style>
+	<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+
+<style type="text/css" id="custom-header-css">body.custom-header #site-title a { color: #252525; }</style>
+<style type="text/css" id="custom-background-css">
+body.custom-background { background-image: url('http://www.blogfshare.com/wp-content/themes/ex-astris/images/backgrounds/mountain.jpg'); background-repeat: repeat; background-position: top left; background-attachment: fixed; }
+</style>
+<style id="style-1-cropbar-clipper">/* Copyright 2014 Evernote Corporation. All rights reserved. */
+.en-markup-crop-options {
+    top: 18px !important;
+    left: 50% !important;
+    margin-left: -100px !important;
+    width: 200px !important;
+    border: 2px rgba(255,255,255,.38) solid !important;
+    border-radius: 4px !important;
+}
+
+.en-markup-crop-options div div:first-of-type {
+    margin-left: 0px !important;
+}
+</style></head>
+
+<body class="wordpress ltr zh zh-cn child-theme y2016 m07 d20 h10 wednesday logged-out custom-background custom-header display-header-text singular singular-post singular-post-1555 post-format-standard custom-colors layout-2c-l font-primary" dir="ltr" itemscope="itemscope" itemtype="http://schema.org/WebPage" huaban_collector_injected="true" data-feedly-mini="yes"><div id="BAIDU_DUP_fp_wrapper" style="position: absolute; left: -1px; bottom: -1px; z-index: 0; width: 0px; height: 0px; overflow: hidden; visibility: hidden; display: none;"><iframe id="BAIDU_DUP_fp_iframe" src="./iOS安全–浅谈关于iOS加固的几种方法_files/o.html" style="width: 0px; height: 0px; visibility: hidden; display: none;"></iframe></div>
+
+	<div id="container">
+
+		
+	<nav id="menu-primary" class="menu font-secondary" role="navigation" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+
+		<div class="assistive-text skip-link">
+			<a href="http://www.blogfshare.com/ios-protect.html#content">Skip to content</a>
+		</div><!-- .skip-link -->
+
+		<h3 class="menu-toggle font-headlines">
+			<span class="screen-reader-text">Navigation</span>
+		</h3><!-- .menu-toggle -->
+
+		<div class="wrap"><ul id="menu-primary-items" class="menu-items"><li id="menu-item-904" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-904"><a href="http://www.blogfshare.com/category/java">Java</a></li>
+<li id="menu-item-1105" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1105"><a href="http://www.blogfshare.com/category/kernel">Windows内核</a></li>
+<li id="menu-item-1008" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1008"><a href="http://www.blogfshare.com/category/os">操作系统</a></li>
+<li id="menu-item-1314" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-1314"><a href="http://www.blogfshare.com/category/ios-secure">iOS安全</a></li>
+<li id="menu-item-1486" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1486"><a href="http://www.blogfshare.com/category/android-sec">Android安全</a></li>
+<li id="menu-item-926" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-926"><a href="http://www.blogfshare.com/category/c-cplus">C/C++</a></li>
+<li id="menu-item-905" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-905"><a href="http://www.blogfshare.com/category/masm">汇编语言</a></li>
+<li id="menu-item-1013" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1013"><a href="http://www.blogfshare.com/category/algorithm">算法</a></li>
+<li id="menu-item-976" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-976"><a href="http://www.blogfshare.com/category/php">php</a></li>
+<li id="menu-item-977" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-977"><a href="http://www.blogfshare.com/category/varied">杂</a></li>
+</ul><form role="search" method="get" class="search-form" action="http://www.blogfshare.com/"><a class="toggle">&nbsp;</a><div style="display: none;">
+				<label class="font-secondary label-search">
+					<span class="screen-reader-text">搜索：</span>
+					<input type="search" class="search-field font-primary" placeholder="搜索…" value="" name="s" title="搜索：">
+				</label>
+				<input type="submit" class="search-submit font-primary font-secondary" value="搜索">
+			</div></form></div>
+	</nav><!-- #menu-primary -->
+
+
+		<div class="wrap">
+
+			<header id="header" role="banner" itemscope="itemscope" itemtype="http://schema.org/WPHeader">
+
+				
+					<div id="branding">
+                        <!--<img alt='' src='http://gravatar.duoshuo.com/avatar/f46cce7f92ebbf7a8276cf3f01dbffa2?s=320&amp;d=&amp;r=G' class='avatar avatar-320 photo' height='320' width='320' itemprop="image" />-->
+<img alt="" src="./iOS安全–浅谈关于iOS加固的几种方法_files/fendou.jpg" class="avatar avatar-320 photo" height="320" width="320" itemprop="image">
+						<h1 id="site-title" itemprop="headline" class="font-headlines"><a href="http://www.blogfshare.com/" rel="home">Coder</a></h1>						<h2 id="site-description" itemprop="description" class="font-primary">猿，改变世界的动物！</h2>                        					</div><!-- #branding -->
+
+					
+
+			</header><!-- #header -->
+
+			
+			<div id="main" class="main">
+
+				
+	
+		<nav class="breadcrumb-trail breadcrumbs font-secondary" itemprop="breadcrumb"><span class="trail-begin"><a href="http://www.blogfshare.com/" title="Coder" rel="home"><span class="screen-reader-text">Home</span></a></span>
+			 <span class="sep"><span class="screen-reader-text">&gt;</span></span> <span class="trail-end">iOS安全–浅谈关于iOS加固的几种方法</span>
+		</nav>
+
+<main id="content" class="content" role="main" itemprop="mainContentOfPage" itemscope="" itemtype="http://schema.org/Blog">
+
+	
+	
+		
+			
+			<article id="post-1555" class="entry post publish author-AloneMonkey post-1555 format-standard category-ios-secure" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
+
+	
+		<header class="entry-header">
+
+			<h1 class="entry-title font-headlines" itemprop="headline">iOS安全–浅谈关于iOS加固的几种方法</h1>
+
+			<div class="entry-byline font-secondary">
+				<span class="entry-author" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"><a href="http://www.blogfshare.com/author/AloneMonkey" title="由AloneMonkey发布" rel="author" class="url fn n" itemprop="url"><span itemprop="name">AloneMonkey</span></a></span>
+				<time class="entry-published updated" datetime="2015-09-18T00:24:07+08:00" title="星期五, 九月 18, 2015, 12:24 上午">2015年9月18日</time>
+				<a href="http://www.blogfshare.com/ios-protect.html#comments" class="comments-link" itemprop="discussionURL" title="《iOS安全–浅谈关于iOS加固的几种方法》上的评论">2</a>											</div><!-- .entry-byline -->
+
+		</header><!-- .entry-header -->
+
+		<div class="entry-content" itemprop="articleBody">
+			<p>关于IOS安全这方面呢，能做的安全保护确实要比Android平台下面能做的少很多。</p>
+<p>只要你的手机没越狱，基本上来说是比较安全的，当然如果你的手机越狱了，可能也会相应的产生一些安全方面的问题。就比如我在前面几篇博客里面所介绍的一些IOS逆向分析，动态分析以及破解方法。</p>
+<p>但是尽管这样，对IOS保护这方面来说，需求还不是很乏，所有基于IOS平台的加固产品也不是很多，目前看到几种关于IOS加固的产品也有做的比较好的。</p>
+<p>最开始关于爱加密首创的IOS加密，<a title="http://www.ijiami.cn/ios" href="http://www.ijiami.cn/ios">http://www.ijiami.cn/ios</a>&nbsp; 个人感觉这只是一个噱头而已，因为没有看到具体的工具以及加固应用，所以也不知道它的效果怎么样了。</p>
+<p>后来在看雪上面看到一个<a title="http://www.safengine.com/mobile/" href="http://www.safengine.com/mobile/">http://www.safengine.com/mobile/</a> 有关于IOS加密的工具，但是感觉用起来太麻烦了，而且让产品方也不是很放心，要替换xcode默认的编译器。</p>
+<p>不久前看到偶然看到一个白盒加密的应用<a title="http://kiwisec.com/" href="http://kiwisec.com/">http://kiwisec.com/</a> 也下下来试用了一下，感觉要比上面两个从使用上方面了许多，而且考虑的东西也是比较多的。</p>
+<p>好了，看了别人做的一些工具，这里大概说下都有哪些加固方法以及大概的实现吧，本人也是刚接触这个方面不就，可能分析的深度没有那么深入，大家就随便听听吧。</p>
+<p>现在的加固工具总的来说都是从以下几个方面来做的：</p>
+<p>一、字符串加密：</p>
+<p>现状：对于字符串来说，程序里面的明文字符串给静态分析提供了极大的帮助，比如说根据界面特殊字符串提示信息，从而定义到程序代码块，或者获取程序使用的一些网络接口等等。</p>
+<p>加固：对程序中使用到字符串的地方，首先获取到使用到的字符串，当然要注意哪些是能加密，哪些不能加密的，然后对字符串进行加密，并保存加密后的数据，再在使用字符串的地方插入解密算法，这样就很好的保护了明文字符串。</p>
+<p>二、类名方法名混淆</p>
+<p>现状：目前市面上的IOS应用基本上是没有使用类名方法名混淆的，所以只要我们使用class-dump把应用的类和方法定义dump下来，然后根据方法名就能够判断很多程序的处理函数是在哪。从而进行hook等操作。</p>
+<p>加固：对于程序中的类名方法名，自己产生一个随机的字符串来替换这些定义的类名和方法名，但是不是所有类名，方法名都能替换的，要过滤到系统有关的函数以及类，可以参考下开源项目：<a title="https://github.com/Polidea/ios-class-guard" href="https://github.com/Polidea/ios-class-guard">https://github.com/Polidea/ios-class-guard</a></p>
+<p>三、程序代码混淆</p>
+<p>现状：目前的IOS应用找到可执行文件然后拖到<em>Hopper</em> Disassembler或者IDA里面程序的逻辑基本一目了然。</p>
+<p>加固：可以基于Xcode使用的编译器clang，然后在中间层也就是IR实现自己的一些混淆处理，比如加入一些无用的逻辑块啊，代码块啊，以及加入各种跳转但是又不影响程序原有的逻辑。可以参考下开源项目：<a title="https://github.com/obfuscator-llvm/obfuscator/" href="https://github.com/obfuscator-llvm/obfuscator/">https://github.com/obfuscator-llvm/obfuscator/</a>&nbsp; 当然开源项目中也是存在一些问题的，还需自己再去做一些优化工作。</p>
+<p>四、加入安全SDK</p>
+<p>现状：目前大多数IOS应用对于简单的反调试功能都没有，更别说注入检测，以及其它的一些检测了。</p>
+<p>加固：加入SDK，包括多处调试检测，注入检测，越狱检测，关键代码加密，防篡改等等功能。并提供接口给开发者处理检测结果。</p>
+<p>&nbsp;</p>
+<p>当然除了这些外，还有很多方面可以做加固保护的，相信大家会慢慢增加对IOS应用安全的意识，保护好自己的APP。</p>
+<p>&nbsp;</p>
+<p>如果大家有什么新的idea，以及见解，欢迎入群交流~~~</p>
+			<p>本文链接：<a href="http://www.blogfshare.com/ios-protect.html" title="iOS安全–浅谈关于iOS加固的几种方法">http://www.blogfshare.com/ios-protect.html</a></p>
+                        <!--<p>转载提示：除非注明，AloneMonkey的文章均为原创，转载请以链接形式注明作者和出处。谢谢合作！</p>-->
+					</div><!-- .entry-content -->
+
+		<footer class="entry-footer font-secondary">
+			<span class="entry-terms category" itemprop="articleSection">Posted in <a href="http://www.blogfshare.com/category/ios-secure" rel="tag">iOS安全</a></span>					</footer><!-- .entry-footer -->
+
+	
+</article><!-- .entry -->
+			
+				
+<section id="comments-template">
+
+	
+		<div id="comments">
+
+			<h3 id="comments-number" class="font-headlines"><span class="wrap">2条评论</span></h3>
+
+			<ol class="comment-list">
+				<li id="comment-4832" class="comment even thread-even depth-1 has-avatar" itemprop="comment" itemscope="itemscope" itemtype="http://schema.org/UserComments">
+
+	<article>
+		<header class="comment-meta font-secondary">
+			<img alt="" src="./iOS安全–浅谈关于iOS加固的几种方法_files/af7d6b1ea9584720d3daef55f048b9bf" class="avatar avatar-96 photo" height="96" width="96" itemprop="image">			<cite class="comment-author" itemprop="creator" itemscope="itemscope" itemtype="http://schema.org/Person">yfc</cite><br>
+			<time class="comment-published" datetime="2015-12-23T17:38:54+08:00" title="星期三, 十二月 23, 2015, 5:38 下午" itemprop="commentTime">7月 ago</time>
+			<a class="comment-permalink" href="http://www.blogfshare.com/ios-protect.html#comment-4832" itemprop="url">Permalink</a>
+					</header><!-- .comment-meta -->
+
+		<div class="comment-content" itemprop="commentText">
+			<p>哪些文件名不能混淆呢  上面的mac代码看不懂</p>
+		</div><!-- .comment-content -->
+
+		<a itemprop="replyToUrl" class="comment-reply-link font-secondary" href="http://www.blogfshare.com/ios-protect.html?replytocom=4832#respond" onclick="return addComment.moveForm(&quot;comment-4832&quot;, &quot;4832&quot;, &quot;respond&quot;, &quot;1555&quot;)">回复</a>	</article>
+
+<ol class="children">
+<li id="comment-4863" class="comment byuser comment-author-AloneMonkey bypostauthor odd alt depth-2 role-administrator has-avatar" itemprop="comment" itemscope="itemscope" itemtype="http://schema.org/UserComments">
+
+	<article>
+		<header class="comment-meta font-secondary">
+			<img alt="" src="./iOS安全–浅谈关于iOS加固的几种方法_files/f46cce7f92ebbf7a8276cf3f01dbffa2" class="avatar avatar-96 photo" height="96" width="96" itemprop="image">			<cite class="comment-author" itemprop="creator" itemscope="itemscope" itemtype="http://schema.org/Person">AloneMonkey</cite><br>
+			<time class="comment-published" datetime="2016-01-06T21:52:06+08:00" title="星期三, 一月 6, 2016, 9:52 下午" itemprop="commentTime">7月 ago</time>
+			<a class="comment-permalink" href="http://www.blogfshare.com/ios-protect.html#comment-4863" itemprop="url">Permalink</a>
+					</header><!-- .comment-meta -->
+
+		<div class="comment-content" itemprop="commentText">
+			<p>系统的不能混淆，还有一些动态调用的，你可以自己先尝试混淆一下</p>
+		</div><!-- .comment-content -->
+
+		<a itemprop="replyToUrl" class="comment-reply-link font-secondary" href="http://www.blogfshare.com/ios-protect.html?replytocom=4863#respond" onclick="return addComment.moveForm(&quot;comment-4863&quot;, &quot;4863&quot;, &quot;respond&quot;, &quot;1555&quot;)">回复</a>	</article>
+
+</li><!-- .comment --></ol><!-- .children -->
+</li><!-- .comment -->			</ol><!-- .comment-list -->
+
+			
+		</div><!-- #comments-->
+
+	
+	
+									<div id="respond" class="comment-respond">
+				<h3 id="reply-title" class="comment-reply-title font-headlines"><span class="wrap">发表评论 <small class="font-primary"><a rel="nofollow" id="cancel-comment-reply-link" href="http://www.blogfshare.com/ios-protect.html#respond" style="display:none;">取消回复</a></small></span></h3>
+									<form action="http://www.blogfshare.com/wp-comments-post.php" method="post" id="commentform" class="comment-form" novalidate="">
+																			<p class="comment-notes">电子邮件地址不会被公开。 必填项已用<span class="required font-primary">*</span>标注</p>							<p class="comment-form-author"><label for="author" class="font-secondary label-text">姓名 <span class="required font-primary">*</span></label> <input id="author" name="author" type="text" value="" size="30" aria-required="true" class="font-primary"></p>
+<p class="comment-form-email"><label for="email" class="font-secondary label-email">电子邮件 <span class="required font-primary">*</span></label> <input id="email" name="email" type="email" value="" size="30" aria-required="true" class="font-primary"></p>
+<p class="comment-form-url"><label for="url" class="font-secondary label-url">站点</label> <input id="url" name="url" type="url" value="" size="30" class="font-primary"></p>
+<p>
+<label for="mcspvalue" class="font-secondary label-text">Spam protection: Sum of 1 + 8 ?</label> <span class="required font-primary">*</span>
+<input id="mcspvalue" name="mcspvalue" type="text" value="" size="30" aria-required="true" class="font-primary">
+<input type="hidden" name="mcspinfo" value="ab157" class="font-primary">
+</p>												<p class="comment-form-comment"><label for="comment" class="font-secondary label-textarea">评论</label> <textarea id="comment" name="comment" cols="45" rows="8" aria-required="true" class="font-primary"></textarea></p>						<p class="form-allowed-tags">您可以使用这些<abbr title="HyperText Markup Language">HTML</abbr>标签和属性： <code>&lt;a href="" title=""&gt; &lt;abbr title=""&gt; &lt;acronym title=""&gt; &lt;b&gt; &lt;blockquote cite=""&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=""&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=""&gt; &lt;strike&gt; &lt;strong&gt; </code></p>						<p class="form-submit">
+							<input name="submit" type="submit" id="submit" value="发表评论" class="font-primary font-secondary">
+							<input type="hidden" name="comment_post_ID" value="1555" id="comment_post_ID" class="font-primary">
+<input type="hidden" name="comment_parent" id="comment_parent" value="0" class="font-primary">
+						</p>
+											</form>
+							</div><!-- #respond -->
+			
+</section><!-- #comments-template -->
+			
+		
+		
+	<div class="loop-nav">
+		<div class="prev">Previous Post: <a href="http://www.blogfshare.com/ailibaba-crack02.html" rel="prev">Android安全–阿里移动安全挑战赛2014的第二题分析</a></div>		<div class="next">Next Post: <a href="http://www.blogfshare.com/ios-xcodeghost.html" rel="next">iOS安全–简单谈一谈XCodeGhost注入第三方代码的事</a></div>	</div><!-- .loop-nav -->
+
+
+	
+</main><!-- #content -->
+
+				
+	<aside id="sidebar-primary" class="sidebar" role="complementary" itemscope="itemscope" itemtype="http://schema.org/WPSideBar">
+
+		
+			<section id="text-2" class="widget widget_text">			<div class="textwidget"><iframe width="100%" height="80" class="share_self" frameborder="0" scrolling="no" src="./iOS安全–浅谈关于iOS加固的几种方法_files/index.html"></iframe>
+<br>
+<p align="center">
+<a href="http://www.alonemonkey.com/" target="_blank"><font color="red">-&gt;-&gt;-&gt;新博客地址</font></a>
+</p>
+<p align="center"><font color="red">点击右边入群→</font><a target="_blank" href="http://shang.qq.com/wpa/qunwpa?idkey=df6ce3ca793a02cdd62223cd618ead70039b6b74b67998f33f2354cc42ac269e" class="img-hyperlink"><img border="0" src="./iOS安全–浅谈关于iOS加固的几种方法_files/group.png" alt="Coder博客交流群" title="Coder博客交流群"></a></p></div>
+		</section><section id="text-6" class="widget widget_text">			<div class="textwidget"><div align="center">
+<font color="red">关注微信公众号,获取最新干货</font><br><br>
+<img src="./iOS安全–浅谈关于iOS加固的几种方法_files/saved_resource" height="200" width="200"> </div></div>
+		</section><section id="text-5" class="widget widget_text">			<div class="textwidget"><script type="text/javascript">
+var cpro_id="u2226629";
+(window["cproStyleApi"] = window["cproStyleApi"] || {})[cpro_id]={at:"3",rsi0:"300",rsi1:"250",pat:"3",tn:"baiduCustNativeAD",rss1:"EAF1F3",conBW:"0",adp:"1",ptt:"0",titFF:"%E5%BE%AE%E8%BD%AF%E9%9B%85%E9%BB%91",titFS:"14",rss2:"#656565",titSU:"0",tft:"0",tlt:"1"}
+</script>
+<script src="./iOS安全–浅谈关于iOS加固的几种方法_files/c.js" type="text/javascript"></script><div id="BAIDU_SSP__wrapper_u2226629_0"><iframe id="iframeu2226629_0" src="./iOS安全–浅谈关于iOS加固的几种方法_files/bcgm.html" width="300" height="250" align="center,center" vspace="0" hspace="0" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" style="border:0; vertical-align:bottom;margin:0;" allowtransparency="true"></iframe></div></div>
+		</section>		<section id="recent-posts-2" class="widget widget_recent_entries">		<h3 class="widget-title font-headlines"><span class="wrap">近期文章</span></h3>		<ul>
+					<li>
+				<a href="http://www.blogfshare.com/public-platform-list.html">微信公众平台文章列表(05/10)</a>
+						</li>
+					<li>
+				<a href="http://www.blogfshare.com/the-second-wechat.html">iOS安全–看了这个，你还敢用分身版微信吗？</a>
+						</li>
+					<li>
+				<a href="http://www.blogfshare.com/wechat-openredenvelopes.html">iOS安全–在非越狱平台进行越狱开发（附分析流程）</a>
+						</li>
+					<li>
+				<a href="http://www.blogfshare.com/redirect-console-log.html">iOS安全–实时查看模拟器的日志输出</a>
+						</li>
+					<li>
+				<a href="http://www.blogfshare.com/crash_reporter.html">iOS安全–不同平台的崩溃收集</a>
+						</li>
+					<li>
+				<a href="http://www.blogfshare.com/dumpdecrypted-app.html">iOS安全—dumpdecrypted APP砸壳</a>
+						</li>
+					<li>
+				<a href="http://www.blogfshare.com/decache-dyld-shared-cache.html">iOS安全—decache dyld_shared_cache文件</a>
+						</li>
+					<li>
+				<a href="http://www.blogfshare.com/inject-with-njb.html">iOS安全–可执行文件dylib注入，无需越狱</a>
+						</li>
+					<li>
+				<a href="http://www.blogfshare.com/block-code-inject.html">iOS安全—阻止tweak注入hook api</a>
+						</li>
+					<li>
+				<a href="http://www.blogfshare.com/ali-ios-game.html">iOS安全–阿里比赛iOS 1. 2 题解</a>
+						</li>
+					<li>
+				<a href="http://www.blogfshare.com/defineclassnative.html">Android安全–从defineClassNative看类的加载过程</a>
+						</li>
+					<li>
+				<a href="http://www.blogfshare.com/dexclassloader.html">Android安全–DexClassLoader动态加载分析</a>
+						</li>
+					<li>
+				<a href="http://www.blogfshare.com/ios-xcodeghost.html">iOS安全–简单谈一谈XCodeGhost注入第三方代码的事</a>
+						</li>
+					<li>
+				<a href="http://www.blogfshare.com/ios-protect.html">iOS安全–浅谈关于iOS加固的几种方法</a>
+						</li>
+					<li>
+				<a href="http://www.blogfshare.com/ailibaba-crack02.html">Android安全–阿里移动安全挑战赛2014的第二题分析</a>
+						</li>
+				</ul>
+		</section><section id="recent-comments-2" class="widget widget_recent_comments"><h3 class="widget-title font-headlines"><span class="wrap">近期评论</span></h3><ul id="recentcomments"><li class="recentcomments">月下猿人发表在《<a href="http://www.blogfshare.com/public-platform-list.html#comment-5208">微信公众平台文章列表(05/10)</a>》</li><li class="recentcomments"><a href="http://www.lsweipingxuan.com/" rel="external nofollow" class="url fn n" itemprop="url"><span itemprop="name">微信投票管理软件</span></a>发表在《<a href="http://www.blogfshare.com/crash_reporter.html#comment-5195">iOS安全–不同平台的崩溃收集</a>》</li><li class="recentcomments"><a href="http://zuimeiweixiao.show.longsupower.com/" rel="external nofollow" class="url fn n" itemprop="url"><span itemprop="name">最美微笑</span></a>发表在《<a href="http://www.blogfshare.com/crash_reporter.html#comment-5194">iOS安全–不同平台的崩溃收集</a>》</li><li class="recentcomments"><a href="http://zuimeiweixiao.show.longsupower.com/" rel="external nofollow" class="url fn n" itemprop="url"><span itemprop="name">最美微笑</span></a>发表在《<a href="http://www.blogfshare.com/wechat-openredenvelopes.html#comment-5193">iOS安全–在非越狱平台进行越狱开发（附分析流程）</a>》</li><li class="recentcomments"><a href="http://themebetter.com/question" rel="external nofollow" class="url fn n" itemprop="url"><span itemprop="name">themebetter</span></a>发表在《<a href="http://www.blogfshare.com/public-platform-list.html#comment-5178">微信公众平台文章列表(05/10)</a>》</li><li class="recentcomments">inject发表在《<a href="http://www.blogfshare.com/block-code-inject.html#comment-5141">iOS安全—阻止tweak注入hook api</a>》</li><li class="recentcomments"><a href="http://pingxuan.longsupower.com/" rel="external nofollow" class="url fn n" itemprop="url"><span itemprop="name">微信投票</span></a>发表在《<a href="http://www.blogfshare.com/the-second-wechat.html#comment-5127">iOS安全–看了这个，你还敢用分身版微信吗？</a>》</li><li class="recentcomments"><a href="http://www.gzpblog.com/" rel="external nofollow" class="url fn n" itemprop="url"><span itemprop="name">锅子</span></a>发表在《<a href="http://www.blogfshare.com/php-curl-get-post.html#comment-5102">PHP中使用CURL实现GET和POST请求</a>》</li><li class="recentcomments"><a href="http://www.hacker.org/" rel="external nofollow" class="url fn n" itemprop="url"><span itemprop="name">88888</span></a>发表在《<a href="http://www.blogfshare.com/public-platform-list.html#comment-5052">微信公众平台文章列表(05/10)</a>》</li><li class="recentcomments"><a href="http://aigudao.net/" rel="external nofollow" class="url fn n" itemprop="url"><span itemprop="name">倾城柠檬</span></a>发表在《<a href="http://www.blogfshare.com/wechat-openredenvelopes.html#comment-5047">iOS安全–在非越狱平台进行越狱开发（附分析流程）</a>》</li></ul></section><section id="text-4" class="widget widget_text"><h3 class="widget-title font-headlines"><span class="wrap">友情链接</span></h3>			<div class="textwidget"><p>
+● <a target="_blank" href="http://www.alonemonkey.com/">新博客地址</a>
+</p>
+<p>
+● <a target="_blank" href="http://www.youranshare.com/">悠然品鉴</a>
+</p>
+<p>
+● <a target="_blank" href="http://www.xtuors.com/xtuors/">XTU百事通</a>
+</p>
+<p>
+● <a target="_blank" href="http://blog.csdn.net/shun_fzll">风中老狼的博客</a>
+</p>
+<p>
+● <a target="_blank" href="http://lusongsong.com/">卢松松博客</a>
+</p></div>
+		</section>
+		
+	</aside><!-- #sidebar-primary -->
+
+
+			</div><!-- #main -->
+
+			
+		</div><!-- .wrap -->
+
+		<footer id="footer" role="contentinfo" itemscope="itemscope" itemtype="http://schema.org/WPFooter" style="background-color:transparent;text-align:center">
+
+			<div class="wrap">
+
+				<p class="credit">
+					Copyright © 2016 <a class="site-link" href="http://www.blogfshare.com/" rel="home">Coder</a>. Powered by WordPress and Stargazer.				</p><!-- .credit -->
+
+			</div><!-- .wrap -->
+
+		</footer><!-- #footer -->
+
+	</div><!-- #container -->
+
+	<script type="text/javascript" src="./iOS安全–浅谈关于iOS加固的几种方法_files/comment-reply.min.js"></script>
+<script type="text/javascript" src="./iOS安全–浅谈关于iOS加固的几种方法_files/stargazer.min.js"></script>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Ff1f0ff4ac3177522ad629077cda9b9c5' type='text/javascript'%3E%3C/script%3E"));
+</script><script src="./iOS安全–浅谈关于iOS加固的几种方法_files/h.js" type="text/javascript"></script><a href="http://tongji.baidu.com/hm-web/welcome/ico?s=f1f0ff4ac3177522ad629077cda9b9c5" target="_blank" class="img-hyperlink"><img border="0" src="./iOS安全–浅谈关于iOS加固的几种方法_files/21.gif" width="20" height="20"></a>
+
+
+
+<!-- Performance optimized by W3 Total Cache. Learn more: http://www.w3-edge.com/wordpress-plugins/
+
+Page Caching using disk: enhanced
+Database Caching using disk
+Object Caching 838/1499 objects using disk
+
+ Served from: www.blogfshare.com @ 2016-07-20 10:24:51 by W3 Total Cache --><div id="HUABAN_WIDGETS"><div class="HUABAN-f-button" style="display: none; left: 1206.48px; top: 82px;">采集</div><style>#HUABAN_WIDGETS  {font-family: "helvetica neue",arial,sans-serif; color: #444; font-size: 14px;} #HUABAN_WIDGETS * {box-sizing: content-box;} #HUABAN_WIDGETS .HUABAN-main {position: fixed; left: 0; top: 0; width: 100%; height: 100%; background: #e5e5e5; background: rgba(229,229,229,.95); max-height: 100%; overflow: hidden; z-index: 9999999999999;} #HUABAN_WIDGETS a img {border: 0;} #HUABAN_WIDGETS .HUABAN-header {height: 50px; background: white; box-shadow: 0 0 4px rgba(0,0,0,.2); width: 100%; left: 0; top: 0; position: absolute;} #HUABAN_WIDGETS .HUABAN-header .HUABAN-inner {margin: 0 auto; position: relative;} #HUABAN_WIDGETS .HUABAN-header .HUABAN-close {width: 60px; height: 50px; border-left: 1px solid #ddd; position: absolute; right: 0; top: 0; background: url(//huaban.com/img/widgets/btn_close.png) 20px 14px no-repeat; cursor: pointer;} #HUABAN_WIDGETS .HUABAN-header .HUABAN-close:hover {background-position: 20px -26px;} #HUABAN_WIDGETS .HUABAN-header .HUABAN-close:active {background-position: 20px -66px;} #HUABAN_WIDGETS .HUABAN-header .HUABAN-logo {display: block; position: absolute; top: 12px;} #HUABAN_WIDGETS .HUABAN-waterfall-holder {position: relative; overflow-y: auto; height: 100%;} #HUABAN_WIDGETS .HUABAN-waterfall {position: relative; margin-top: 50px;} #HUABAN_WIDGETS .HUABAN-waterfall .HUABAN-empty {position: absolute; left: 50%; top: 30px; height: 36px; line-height: 36px; width: 216px; text-align: left; margin-left: -128px; color: #777; background: url(//huaban.com/img/widgets/icon_notice.png) 12px 8px no-repeat white; padding-left: 40px; font-size: 15px;} #HUABAN_WIDGETS .HUABAN-btn {display: inline-block; border-radius: 2px; font-size: 14px; padding: 0 12px; height: 30px; line-height: 30px; cursor: pointer; text-decoration: none; white-space: nowrap; -moz-user-select: none; -webkit-user-select: none; user-select: none; text-align: center; background: #D53939; color: white;} #HUABAN_WIDGETS .HUABAN-btn:hover {background: #E54646;} #HUABAN_WIDGETS .HUABAN-btn:active {background: #C52424;} #HUABAN_WIDGETS .HUABAN-wbtn {background: #EDEDED; color: #444;} #HUABAN_WIDGETS .HUABAN-wbtn:hover {background: #F2F2F2;} #HUABAN_WIDGETS .HUABAN-wbtn:active {background: #DDD;} #HUABAN_WIDGETS .HUABAN-f-button {position: absolute; display: none; z-index: 9999999999998; box-shadow: 0 0 0 2px rgba(255,255,255,.2); background: #aaa; background: rgba(0,0,0,.3); color: white; cursor: pointer; padding: 0 12px; height: 30px; line-height: 30px; border-radius: 2px; font-size: 14px} #HUABAN_WIDGETS .HUABAN-f-button:hover {background-color: #999; background-color: rgba(0,0,0,.5);} #HUABAN_WIDGETS .HUABAN-f-button:active {background-color: rgba(0,0,0,.6);} #HUABAN_WIDGETS .HUABAN-red-normal-icon-button {width: 36px; height: 24px; border: 0px; line-height: 24px; padding-left: 24px; padding-right: 0px; text-align: left; background: url(//huaban.com/img/widgets/widget_icons.png) 0 -200px no-repeat; box-shadow: none !important; font-size: 14px; background-color: transparent !important;} #HUABAN_WIDGETS .HUABAN-red-normal-icon-button:hover {background-position: -130px -200px;} #HUABAN_WIDGETS .HUABAN-red-normal-icon-button:active {background-position: -260px -200px;} #HUABAN_WIDGETS .HUABAN-red-large-icon-button {width: 80px; height: 24px; border: 0px; line-height: 24px; padding-left: 24px; padding-right: 0px; text-align: left; background: url(//huaban.com/img/widgets/widget_icons.png) 0 -150px no-repeat; box-shadow: none !important; font-size: 14px; background-color: transparent !important;} #HUABAN_WIDGETS .HUABAN-red-large-icon-button:hover {background-position: -130px -150px;} #HUABAN_WIDGETS .HUABAN-red-large-icon-button:active {background-position: -260px -150px;} #HUABAN_WIDGETS .HUABAN-red-small-icon-button {width: 30px; height: 21px; border: 0px; line-height: 21px; padding-left: 20px; padding-right: 0px; text-align: left; background: url(//huaban.com/img/widgets/widget_icons.png) 0 -250px no-repeat; box-shadow: none !important; font-size: 12px; background-color: transparent !important;} #HUABAN_WIDGETS .HUABAN-red-small-icon-button:hover {background-position: -130px -250px;} #HUABAN_WIDGETS .HUABAN-red-small-icon-button:active {background-position: -260px -250px;} #HUABAN_WIDGETS .HUABAN-white-normal-icon-button {width: 36px; height: 24px; border: 0px; line-height: 24px; padding-left: 24px; padding-right: 0px; text-align: left; background: url(//huaban.com/img/widgets/widget_icons.png) 0 -500px no-repeat; box-shadow: none !important; color: #444; font-size: 14px; background-color: transparent !important;} #HUABAN_WIDGETS .HUABAN-white-normal-icon-button:hover {background-position: -130px -500px;} #HUABAN_WIDGETS .HUABAN-white-normal-icon-button:active {background-position: -260px -500px;} #HUABAN_WIDGETS .HUABAN-white-large-icon-button {width: 80px; height: 24px; border: 0px; line-height: 24px; padding-left: 24px; padding-right: 0px; text-align: left; background: url(//huaban.com/img/widgets/widget_icons.png) 0 -450px no-repeat; box-shadow: none !important; color: #444; font-size: 14px; background-color: transparent !important;} #HUABAN_WIDGETS .HUABAN-white-large-icon-button:hover {background-position: -130px -450px;} #HUABAN_WIDGETS .HUABAN-white-large-icon-button:active {background-position: -260px -450px;} #HUABAN_WIDGETS .HUABAN-white-small-icon-button {width: 30px; height: 21px; border: 0px; line-height: 21px; padding-left: 20px; padding-right: 0px; text-align: left; background: url(//huaban.com/img/widgets/widget_icons.png) 0 -550px no-repeat; box-shadow: none !important; color: #444; font-size: 12px; background-color: transparent !important;} #HUABAN_WIDGETS .HUABAN-white-small-icon-button:hover {background-position: -130px -550px;} #HUABAN_WIDGETS .HUABAN-white-small-icon-button:active {background-position: -260px -550px;} #HUABAN_WIDGETS .HUABAN-cell {width: 236px; position: absolute; background: white; box-shadow: 0 1px 3px rgba(0,0,0,.3); transition: left .3s ease-in-out, top .3s linear;} #HUABAN_WIDGETS .HUABAN-cell .HUABAN-img-holder {overflow: hidden; position: relative;} #HUABAN_WIDGETS .HUABAN-cell .HUABAN-img-holder:hover img.HUABAN-cell-img {opacity: .8} #HUABAN_WIDGETS .HUABAN-cell .HUABAN-video-icon {width: 72px; height: 62px; position: absolute; left: 50%; top: 50%; margin: -31px auto auto -36px; background: url(//huaban.com/img/widgets/media_video.png) 0 0 no-repeat; display: none;} #HUABAN_WIDGETS .HUABAN-cell.HUABAN-video .HUABAN-video-icon {display: block;} #HUABAN_WIDGETS .HUABAN-cell .HUABAN-over {display: none;} #HUABAN_WIDGETS .HUABAN-cell:hover .HUABAN-over {display: block;} #HUABAN_WIDGETS .HUABAN-cell .HUABAN-over .HUABAN-btn {width: 60px; height: 34px; padding: 0; position: absolute; left: 50%; top: 50%; margin: -18px 0 0 -31px; line-height: 34px; box-shadow: 0 0 0 2px rgba(255,255,255,.2); font-size: 16px;} #HUABAN_WIDGETS .HUABAN-cell.HUABAN-long .HUABAN-img-holder {height: 600px;} #HUABAN_WIDGETS .HUABAN-cell.HUABAN-long .HUABAN-img-holder:after {content: ""; display: block; position: absolute; width: 236px; height: 12px; left: 0; bottom: 0; background: url(//huaban.com/img/widgets/long_image_shadow_2.png) repeat-x 4px top;} #HUABAN_WIDGETS .HUABAN-cell img {width: 236px; display: block;} #HUABAN_WIDGETS .HUABAN-cell .HUABAN-size {margin: 8px 16px; font-size: 12px; color: #999} #HUABAN_WIDGETS .HUABAN-cell .HUABAN-description {display: block; width: 202px; margin: 0 6px 6px; padding: 6px 10px; border: 0; resize: none; outline: 0; border: 1px solid transparent; line-height: 18px; font-size: 13px; overflow: hidden; word-wrap: break-word; background: url(//huaban.com/img/widgets/icon_edit.png) 500px center no-repeat;} #HUABAN_WIDGETS .HUABAN-cell:hover .HUABAN-description {background-color: #fff9e0; background-position: right top;} #HUABAN_WIDGETS .HUABAN-cell .HUABAN-description:focus {background-color: #F9F9F9; background-position: 500px center;} #HUABAN_WIDGETS .HUABAN-cell .HUABAN-select-btn {width: 34px; height:34px; background: url(//huaban.com/img/widgets/checkbox.png) 0 0 no-repeat; position: absolute; right: 5px; top: 5px; cursor: pointer;} #HUABAN_WIDGETS .HUABAN-cell .HUABAN-pinned-label {position: absolute; left: 0; top: 10px; height: 24px; line-height: 24px; padding: 0 10px; background: #CE0000; background: rgba(200, 0, 0, 0.9); color: white; font-size: 12px; display: none;} #HUABAN_WIDGETS .HUABAN-cell.HUABAN-pinned .HUABAN-pinned-label {display: block;} #HUABAN_WIDGETS .HUABAN-selected .HUABAN-select-btn {background-position: 0 -40px;} #HUABAN_WIDGETS .HUABAN-multi .HUABAN-cell .HUABAN-img-holder {cursor: pointer;} #HUABAN_WIDGETS .HUABAN-multi .HUABAN-cell .HUABAN-cell-pin-btn {display: none;} #HUABAN_WIDGETS .HUABAN-multi .HUABAN-cell .HUABAN-over {display: block;} #HUABAN_WIDGETS .HUABAN-header .HUABAN-multi-buttons {position: absolute; top: 10px; left: 0; display: none;} #HUABAN_WIDGETS .HUABAN-header .HUABAN-multi-buttons .HUABAN-btn {margin-right: 10px;} #HUABAN_WIDGETS .HUABAN-header .HUABAN-multi-noti {display: none; height: 50px; line-height: 50px; text-align: center; font-size: 16px; color: #999; font-weight: bold;} #HUABAN_WIDGETS .HUABAN-header .HUABAN-multi-noti span {font-weight: normal;} #HUABAN_WIDGETS .HUABAN-header .HUABAN-multi-noti i {font-style: normal;} #HUABAN_WIDGETS .HUABAN-header .HUABAN-notice {padding: 0 10px; height:30px; line-height: 30px; position: absolute; left: 50%; top: 10px; margin-left: -83px; background: #fff9e2; text-align: center;} #HUABAN_WIDGETS .HUABAN-header .HUABAN-notice i {display: inline-block; width: 18px; height: 18px; background: url(//huaban.com/img/widgets/icon_notice.png) 0 0 no-repeat; vertical-align: top; margin: 6px 6px 0 0;} #HUABAN_WIDGETS .HUABAN-switcher {height: 50px; width: 100px; position: relative;} #HUABAN_WIDGETS .HUABAN-switcher .HUABAN-title {position: absolute; right: 75px; top: 13px; color: #999; white-space: nowrap; line-height: 24px; opacity: 0; visibility: hidden;} #HUABAN_WIDGETS .HUABAN-switcher:hover .HUABAN-title {visibility: visible; opacity: 1; -webkit-transition: opacity .2s linear; -webkit-transition-delay: .2s; transition: opacity .2s linear; transition-delay: .2s;} #HUABAN_WIDGETS .HUABAN-switcher .HUABAN-bar {width: 40px; height: 24px; background: #EB595F; border-radius: 12px; color: white; position: absolute; right: 0; top: 13px; cursor: pointer; font-size: 14px; -webkit-transition: all .2s linear; transition: all .2s linear;} #HUABAN_WIDGETS .HUABAN-switcher:hover .HUABAN-bar {width: 64px;} #HUABAN_WIDGETS .HUABAN-switcher.HUABAN-on .HUABAN-bar {background: #7DD100;} #HUABAN_WIDGETS .HUABAN-switcher .HUABAN-bar .HUABAN-round {width: 20px; height: 20px; background: white; border-radius: 50%; position: absolute; left: 2px; top: 2px; -webkit-transition: left .2s linear; box-shadow: 0px 0px 3px rgba(0,0,0,0.15); transition: left .2s linear; box-shadow: 0px 0px 3px rgba(0,0,0,0.15);} #HUABAN_WIDGETS .HUABAN-switcher.HUABAN-on .HUABAN-bar .HUABAN-round {left: 17px;} #HUABAN_WIDGETS .HUABAN-switcher.HUABAN-on:hover .HUABAN-bar .HUABAN-round {left: 41px;} #HUABAN_WIDGETS .HUABAN-switcher .HUABAN-bar .HUABAN-text-1 {height: 24px; line-height: 24px; position: absolute; right:17px; top: 0; opacity: 0; visibility: hidden; -webkit-transition: all .2s linear; transition: all .2s linear;} #HUABAN_WIDGETS .HUABAN-switcher:hover .HUABAN-bar .HUABAN-text-1 {right: 9px; opacity: 1; visibility: visible;} #HUABAN_WIDGETS .HUABAN-switcher.HUABAN-on:hover .HUABAN-bar .HUABAN-text-1 {right: 17px; opacity: 0; visibility: hidden;} #HUABAN_WIDGETS .HUABAN-switcher .HUABAN-bar .HUABAN-text-2 {height: 24px; line-height: 24px; position: absolute; left:17px; top: 0; opacity: 0; visibility: hidden; -webkit-transition: all .2s linear; transition: all .2s linear;} #HUABAN_WIDGETS .HUABAN-switcher:hover .HUABAN-bar .HUABAN-text-2 {left: 17px; opacity: 0; visibility: hidden;} #HUABAN_WIDGETS .HUABAN-switcher.HUABAN-on:hover .HUABAN-bar .HUABAN-text-2 {left: 9px; opacity: 1; visibility: visible;} #HUABAN_WIDGETS .HUABAN-header .HUABAN-switcher {position: absolute; right: 0; top: 0;} <!--[if IE 6]>#HUABAN_WIDGETS .HUABAN-red-normal-icon-button, .HUABAN-red-large-icon-button, .HUABAN-red-small-icon-button, .HUABAN-white-normal-icon-button, .HUABAN-white-large-icon-button, .HUABAN-white-small-icon-button { background-image: url({{imgBase}}/widget_icons_ie6.png) <![endif]--></style></div><div id="feedly-mini" title="feedly Mini tookit"></div></body><div></div></html>
