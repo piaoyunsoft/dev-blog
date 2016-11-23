@@ -1,5 +1,13 @@
 # dev-blog
 
+**20161123**
+
+```
+1.添加仿中彩微信小程序的代码
+```
+
+
+
 [20160921](https://github.com/wuxueying/dev-blog/blob/master/20160921.md)
 
 ```
