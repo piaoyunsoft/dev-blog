@@ -1,0 +1,28 @@
+
+<view class="container chat">
+  <view class="chat-item flex-wrp">
+    <view class="avatar flex-item">
+      <image src="../../images/finder_hot_topic.png"></image>
+    </view>
+    <view class="chat-content flex-item">
+      <view class="chat-source">
+        <text class="chatmate">滚足</text>
+      </view>
+      <text class="chat-txt">滴答滴答滴答的</text>
+    </view>
+  </view>
+  <view class="chat-item flex-wrp">
+    <view class="avatar flex-item">
+      <image src="../../images/finder_hot_topic.png"></image>
+    </view>
+    <view class="chat-content flex-item">
+      <view class="chat-source">
+        <text class="chatmate">竞猜代币商城</text>
+      </view>
+      <text class="chat-txt">不充值怎么能变强</text>
+    </view>
+  </view>
+
+</view>
+
+

@@ -1,0 +1,41 @@
+{
+  "pages":[
+    "pages/home/home",
+    "pages/index/index",
+    "pages/find/find",
+    "pages/more/more"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarTextStyle":"white",
+    "navigationBarBackgroundColor": "#d41d15",
+    "navigationBarTitleText": ""
+  },
+  "tabBar": {
+    "color": "#656565",
+    "selectedColor": "#f3302e",
+    "backgroundColor": "#FBFBFB",
+    "borderStyle": "white",
+    "list": [{
+      "pagePath": "pages/home/home",
+      "text": "购彩大厅",
+      "iconPath": "images/home.png",
+      "selectedIconPath": "images/home_selected.png"
+    }, {
+      "pagePath": "pages/index/index",
+      "text": "开奖公告",
+      "iconPath": "images/notice.png",
+      "selectedIconPath": "images/notice_selected.png"
+    }, {
+      "pagePath": "pages/find/find",
+      "text": "发现",
+      "iconPath": "images/find.png",
+      "selectedIconPath": "images/find_selected.png"
+    }, {
+      "pagePath": "pages/more/more",
+      "text": "我的彩票",
+      "iconPath": "images/profile.png",
+      "selectedIconPath": "images/profile_selected.png"
+    }]
+  }
+}

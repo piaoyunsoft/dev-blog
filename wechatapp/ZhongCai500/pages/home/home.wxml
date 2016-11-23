@@ -1,0 +1,46 @@
+<view class="mainContainer">
+
+	<view class="banner">
+		<swiper indicator-dots="true" autoplay="true" interval="2000" duration="1000">
+			<block wx:for="{{bannerImgs}}">
+				<swiper-item>
+					<image class="banner-img" src="{{item}}" class="slide-image"></image>
+				</swiper-item>
+			</block>
+		</swiper>
+	</view>
+
+	<view class="speaker">
+		<view class="leftToRight">
+		<image class="image" src="{{speaker.image}}"></image>
+		<view class="content">{{speaker.title}}</view>
+		</view>
+	</view>
+
+	<view class="suggest">
+		<view class="title">{{suggestCode.title}}</view>
+		<view class="line"></view>
+		<view class="ball-list" wx:for="{{suggestCode.ballnums}}" wx:for-index="idx">
+			<view class="{{idx > 4 ? 'blueball' : 'redball'}}">{{item}}</view>
+		</view>
+		<view class="leftToRight">
+			<text class="subtitle">{{suggestCode.subtitle}}</text>
+			<view class="button">{{suggestCode.buttonText}}</view>
+		</view>
+	</view>
+
+	<view class="lotteryheader"></view>
+	<view class="leftToRight">
+		<view class="btn"></view>
+		<view class="content">{{lotteryHeader.title}}</view>
+	</view>
+
+	<view class="lotteryArea">
+		<view class="list" wx:for="{{lottery.imgUrls}}">
+			<image class="image" src="{{item}}"></image>
+			<view class="title">{{lottery.title[index]}}</view>
+			<view class="subtitle">{{lottery.subtitle[index]}}</view>
+		</view>
+	</view>
+
+</view>

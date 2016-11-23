@@ -56,15 +56,15 @@ It's about building model of data
 
 > We learn,so that we can reason.The result of reasoning often in additional learning.Once we learn,we can store it in memory.
 
-![9A473E72-1399-4809-8A15-697D7C14AA20.png](http://upload-images.jianshu.io/upload_images/546464-34f1ec7a639f7839.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](http://upload-images.jianshu.io/upload_images/546464-34f1ec7a639f7839.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 ## Four schools of thought in AI
 
-![Paste_Image.png](http://upload-images.jianshu.io/upload_images/546464-45615554f59fed6b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![explain](http://upload-images.jianshu.io/upload_images/546464-45615554f59fed6b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 ------
 
-![Paste_Image.png](http://upload-images.jianshu.io/upload_images/546464-355ac7665f53480e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![type](http://upload-images.jianshu.io/upload_images/546464-355ac7665f53480e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 
 
@@ -75,7 +75,7 @@ It's about building model of data
 
 **Practice**
 
-![Paste_Image.png](http://upload-images.jianshu.io/upload_images/546464-84adbdc8fd2f2441.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![Practice](http://upload-images.jianshu.io/upload_images/546464-84adbdc8fd2f2441.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 ## Bayes rule
 
@@ -84,15 +84,16 @@ It's about building model of data
 * Probability
 * Statistics
 
-![P(A|B)](https://wikimedia.org/api/rest_v1/media/math/render/svg/71d8066a406fb22ce08eec25dd04870779345cd3)
+![P(A|B)](http://upload-images.jianshu.io/upload_images/546464-e17b611e50b053cb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 > P of A given B,where B is the evidence and is variable we care about,is P of B given A times P of A over P of B.
 
 * total probability
 
-![total probablity](http://chart.googleapis.com/chart?cht=tx&chl=P(B)%3DP(B%5Ccap%20A)%2BP(B%5Ccap%20A%27)&chs=40)
+
+![total probability](http://upload-images.jianshu.io/upload_images/546464-23361f4d6ff25b0a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 **Practice**
 
-![Paste_Image.png](http://upload-images.jianshu.io/upload_images/546464-dca218cdc801d4cd.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![Practice](http://upload-images.jianshu.io/upload_images/546464-dca218cdc801d4cd.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
