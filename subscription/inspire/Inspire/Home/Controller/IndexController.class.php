@@ -9,25 +9,27 @@ class IndexController extends Controller {
         $signature = $_GET['signature'];
         $array = array($timestamp,$nonce,$token);
         sort($array);
-        $tmpstr = sha1(implode('', $array));
+        $tmpstr = implode('', $array);
+        $tmpstr = sha1($tmpstr);
         if ($tmpstr == $signature && $echostr) {
-        	echo $_GET['echostr'];
-        	exit;
+            echo $_GET['echostr'];
+            exit;
         } else {
-        	$this->responseMsg();
+            $this->responseMsg();
         }
     }
 
     public function responseMsg() {
     	$postArr = $GLOBALS['HTTP_RAW_POST_DATA'];
+        $tmpStr = $postArr;
     	$postObj = simplexml_load_string($postArr);
     	if (strtolower($postObj->MsgType) == 'event') {
     		if (strtolower($postObj->Event) == 'subscribe') {
     			$toUser = $postObj->FromUserName;
-    			$fromUser = $postObj->toUserName;
+    			$fromUser = $postObj->ToUserName;
     			$time = time();
     			$msgType = 'text';
-    			$content = "welcome to follow my subscribe";
+    			$content = 'subscribe: '.$postObj->ToUserName.'<br>wechat user openid: '.$postObj->FromUserName.'<br>feedback msgType: '.$tmpStr;
     			$template = "<xml>
 				           <ToUserName><![CDATA[%s]]></ToUserName>
 				           <FromUserName><![CDATA[%s]]></FromUserName>
