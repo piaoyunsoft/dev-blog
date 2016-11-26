@@ -5,7 +5,7 @@ class IndexController extends Controller {
     public function index(){
         $timestamp = $_GET['timestamp'];
         $nonce = $_GET['nonce'];
-        $token = 'weixin';
+        $token = 'wuxueying';
         $signature = $_GET['signature'];
         $array = array($timestamp,$nonce,$token);
         sort($array);
@@ -81,31 +81,46 @@ class IndexController extends Controller {
         }
     }
 
-    function http_curl() {
+    // function http_curl() {
+    //     $ch = curl_init();
+    //     $url = 'http://www.baidu.com';
+    //     curl_setopt($ch, CURLOPT_URL, $url);
+    //     curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+    //     $output = curl_exec($ch);
+    //     curl_close($ch);
+    //     var_dump($output);
+    // }
+
+    function http_curl($url,$type='get',$res='json',$arr='') {
         $ch = curl_init();
-        $url = 'http://www.baidu.com';
         curl_setopt($ch, CURLOPT_URL, $url);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+        if ($type == 'post') {
+            curl_setopt($ch, CURLOPT_POST, true);
+            curl_setopt($ch, CURLOPT_POSTFIELDS, $arr);
+        }
         $output = curl_exec($ch);
         curl_close($ch);
-        var_dump($output);
-    }
-
-    function getWxAccessToken() {
-        $appid = 'wxd7ee9f7370773a48';
-        $appsecret = '0f0036787e1621003354e79b81cb2f2e';
-        $url = "https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=".$appid."&secret=".$appsecret."";
-        $ch = curl_init();
-        curl_setopt($ch, CURLOPT_URL, $url);
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-        $res = curl_exec($ch);
-        curl_close($ch);
-
-        if (curl_errno($ch)) {
-            var_dump(curl_errno($ch));
+        if ($res == 'json') {
+            return json_decode($output,true);
         }
-        echo json_encode(json_decode($res));
     }
+
+    // function getWxAccessToken() {
+    //     $appid = 'wx2708c404b0c52465';
+    //     $appsecret = '4b9d327c6b2027ba8782faf6f05e80a8';
+    //     $url = "https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=".$appid."&secret=".$appsecret."";
+    //     $ch = curl_init();
+    //     curl_setopt($ch, CURLOPT_URL, $url);
+    //     curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+    //     $res = curl_exec($ch);
+    //     curl_close($ch);
+
+    //     if (curl_errno($ch)) {
+    //         var_dump(curl_errno($ch));
+    //     }
+    //     echo json_encode(json_decode($res));
+    // }
 
     function getWxServerIp() {
         $accessToken = "Olv5_vD-j8z5G_UyFNEFjT-rn2hpzDiGAzYQw0EGUukqioqmFMCR7-8kIXvvBhjRbGOI9UAXjLG4mt-3BsBifIzQh_-qySsmqMlzhqi-5d1f-fgL2jo097_98Qv6bNyNMCAiAAASIG";
@@ -120,5 +135,57 @@ class IndexController extends Controller {
             var_dump(curl_errno($ch));
         }
         echo json_encode(json_decode($res));
+    }
+
+    public function getWxAccessToken() {
+        if ($_SESSION['access_token'] && $_SESSION['expire_time'] > time()) {
+            return $_SESSION['access_token'];
+        } else {
+            $appid = 'wx2708c404b0c52465';
+            $appsecret = '4b9d327c6b2027ba8782faf6f05e80a8';
+            $url = "https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=".$appid."&secret=".$appsecret."";
+            $res = $this->http_curl($url,'get','json');
+            $_SESSION['access_token'] = $res['access_token'];
+            $_SESSION['expire_time'] = time() + 7000;
+            return $res['access_token'];
+        }
+    }
+
+    public function definedItem() {
+        echo $access_token = $this->getWxAccessToken(); 
+        $url = 'https://api.weixin.qq.com/cgi-bin/menu/create?access_token=ACCESS_TOKEN';
+        echo '<br />';
+        $postArr = array(
+            'button'=>array(
+                array(
+                    'name'=>'主页',
+                    'type'=>'click',
+                    'key'=>'item1',
+                ),
+                array(
+                    'name'=>'娱乐',
+                    'sub_button'=>array(
+                        array(
+                            'name'=>'song',
+                            'type'=>'click',
+                            'key'=>'songs',
+                        ),
+                        array(
+                            'name'=>'film',
+                            'type'=>'click',
+                            'url'=>'http://www.baidu.com',
+                        ),
+                    ),
+                ),
+                array(
+                    'name'=>'我的',
+                    'type'=>'view',
+                    'url'=>"http://www.qq.com",
+                ),
+            ),
+        );
+        echo  $postJson = json_encode($postArr);
+        $res = $this->http_curl($url,'post','json',$postJson);
+        var_dump($res);
     }
 }
