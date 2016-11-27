@@ -18,8 +18,11 @@
 		    jsApiList: [
 		    	'onMenuShareTimeline',
 		    	'onMenuShareAppMessage',
+		    	'chooseImage', 
+		    	'scanQRCode',
 		    ] 
 		});
+
 		wx.ready(function(){
 			wx.onMenuShareTimeline({
 			    title: 'test1', 
@@ -47,9 +50,33 @@
 			    }
 			});
 		});
+
+		function showChooseImage() {
+			wx.chooseImage({
+			    count: 1, 
+			    sizeType: ['original', 'compressed'], 
+			    sourceType: ['album', 'camera'], 
+			    success: function (res) {
+			        var localIds = res.localIds; 
+			    }
+			});
+		}
+
+		function scanQRCode() {
+			wx.scanQRCode({
+			    needResult: 0, 
+			    scanType: ["qrCode","barCode"], 
+			    success: function (res) {
+				    var result = res.resultStr;
+				}
+			});
+		}
+
 		wx.error(function(res){
 
 		});
 	</script>
+	<button onclick='showChooseImage();'>showImage</button>
+	<button onclick="scanQRCode();">scan</button>
 </body>
 </html> 
