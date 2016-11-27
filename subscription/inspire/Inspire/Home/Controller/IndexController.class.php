@@ -223,7 +223,7 @@ class IndexController extends Controller {
 
     function sendTemplateMsg() {
         // 15 templates
-        // less 10w one day
+        // less 10w one day 
         $access_token = $this->getWxAccessToken();
         $url = 'https://api.weixin.qq.com/cgi-bin/message/template/send?access_token='.$access_token.'';
         $array = array(
@@ -238,6 +238,42 @@ class IndexController extends Controller {
         );
         $postJson = json_encode($array);
         $res = $this->http_curl($url,'post','json',$postJson);
+        var_dump($res);
+    }
+
+    function getBaseInfo() {
+        $appid = 'wx2708c404b0c52465';
+        $redirect_uri = urlencode("http://123.206.65.101/inspire/inspire.php/Home/Index/getUserOpenId");
+        $url = 'https://open.weixin.qq.com/connect/oauth2/authorize?appid='.$appid.'&redirect_uri='.$redirect_uri.'&response_type=code&scope=snsapi_base&state=123#wechat_redirect';
+        header('location:'.$url);
+    }
+
+    function getUserOpenId() {
+        $appid = 'wx2708c404b0c52465';
+        $appsecret = '4b9d327c6b2027ba8782faf6f05e80a8';
+        $code = $_GET['code'];
+        $url = 'https://api.weixin.qq.com/sns/oauth2/access_token?appid='.$appid.'&secret='.$appsecret.'&code='.$code.'&grant_type=authorization_code';
+        $res = $this->http_curl($url,'get');
+        var_dump($res);
+    }
+
+    function getUserDetail() {
+        $appid = 'wx2708c404b0c52465';
+        $redirect_uri = urlencode("http://123.206.65.101/inspire/inspire.php/Home/Index/getUserInfo");
+        $url = 'https://open.weixin.qq.com/connect/oauth2/authorize?appid='.$appid.'&redirect_uri='.$redirect_uri.'&response_type=code&scope=snsapi_userinfo&state=123#wechat_redirect';
+        header('location:'.$url);
+    }
+
+    function getUserInfo() {
+        $appid = 'wx2708c404b0c52465';
+        $appsecret = '4b9d327c6b2027ba8782faf6f05e80a8';
+        $code = $_GET['code'];
+        $url = 'https://api.weixin.qq.com/sns/oauth2/access_token?appid='.$appid.'&secret='.$appsecret.'&code='.$code.'&grant_type=authorization_code';
+        $res = $this->http_curl($url,'get');
+        $access_token = $res['access_token'];
+        $openid = $res['openid'];
+        $url = 'https://api.weixin.qq.com/sns/userinfo?access_token='.$access_token.'&openid='.$openid.'&lang=zh_CN';
+        $res = $this->http_curl($url);
         var_dump($res);
     }
 }
