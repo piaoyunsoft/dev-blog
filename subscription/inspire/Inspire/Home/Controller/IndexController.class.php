@@ -36,6 +36,25 @@ class IndexController extends Controller {
     			$Index = D('Index');
                 $Index->responseSubscribe($postObj,$arr);
     		}
+            // reScan
+            if (strtolower($postObj->Event) == 'scan') {
+                if ($postObj->EventKey == 2000) {
+                    $tmpTitle = 'welcome to you from Time';
+                }
+                if ($postObj->EventKey == 3000) {
+                    $tmpTitle = 'welcome to you from Forever';
+                }
+                $arr = array(
+                    array(
+                        'title'=>$tmpTitle,
+                        'description'=>"inspire is very good",
+                        'url'=>'http://www.baidu.com',
+                        'picUrl'=>'https://ss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/img/logo/bd_logo1_31bdc765.png'
+                    ),
+                );
+                $Index = D('Index');
+                $Index->responseSubscribe($postObj,$arr);
+            }
     	}
 
         if (strtolower($postObj->Event) == 'click') {
@@ -362,4 +381,6 @@ class IndexController extends Controller {
         echo "forever qrcode";
         echo "<img src='".$url."' />";
     }
+
+
 }
