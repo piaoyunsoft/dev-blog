@@ -323,4 +323,43 @@ class IndexController extends Controller {
         $this->assign('signature',$signature);
         $this->display('share');
     }
+
+    function getTimeQrCode() {
+        // 1.get ticket
+        $access_token = $this->getWxAccessToken();
+        $url = 'https://api.weixin.qq.com/cgi-bin/qrcode/create?access_token='.$access_token;
+        $postArr = array(
+            'expire_seconds'=> 604800,
+            'action_name'=>"QR_SCENE",
+            'action_info'=>array(
+                'scene'=>array('scene_id'=>2000),
+            ),
+        );
+        $postJson = json_encode($postArr);
+        $res = $this->http_curl($url,'post','json',$postJson);
+        $ticket = $res['ticket'];
+        // 2.get qrcode image from ticket
+        $url = 'https://mp.weixin.qq.com/cgi-bin/showqrcode?ticket='.urlencode($ticket);
+        echo "time qrcode";
+        echo "<img src='".$url."' />";
+    }
+
+    function getForeverQrCode() {
+        // 1.get ticket
+        $access_token = $this->getWxAccessToken();
+        $url = 'https://api.weixin.qq.com/cgi-bin/qrcode/create?access_token='.$access_token;
+        $postArr = array(
+            'action_name'=>"QR_LIMIT_SCENE",
+            'action_info'=>array(
+                'scene'=>array('scene_id'=>3000),
+            ),
+        );
+        $postJson = json_encode($postArr);
+        $res = $this->http_curl($url,'post','json',$postJson);
+        $ticket = $res['ticket'];
+        // 2.get qrcode image from ticket
+        $url = 'https://mp.weixin.qq.com/cgi-bin/showqrcode?ticket='.urlencode($ticket);
+        echo "forever qrcode";
+        echo "<img src='".$url."' />";
+    }
 }
