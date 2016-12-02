@@ -6,17 +6,11 @@
     <script src="http://img.mukewang.com/down/55ac9a860001a6c500000000.js"></script>
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/pageA.css">
+    <script src="http://libs.baidu.com/jquery/1.9.1/jquery.min.js"></script>
     <script type="text/javascript" src="js/swipe.js"></script>
 </head>
 <style type="text/css">
-	.charector {
-		width: 151px;
-		height: 291px;
-		background: url(http://img.mukewang.com/55ade248000198ae10550582.png) -0px -291px no-repeat;
-		position: absolute;
-		left: 6%;
-		top: 55%;
-	}
+	
 </style>
 <body>
     <div id='content'>
@@ -32,6 +26,10 @@
             <li>page3</li>
         </ul>
         <div id="boy" class="charector"></div>
+        <div class="button">
+            <button>开始</button>
+            <button>暂停</button>
+        </div>
     </div>
     <script type="text/javascript">
     	var swipe = swipe($("#content"));
@@ -50,6 +48,19 @@
         var boyHeight = $boy.height();
         $boy.css({
         	top: pathY - boyHeight + 25
+        });
+
+        $("button:first").click(function() {
+            $boy.addClass('slowWalk').transition({
+                'left': $("#content").width() + 'px',
+            }, 10000);
+        });
+
+        // 暂停
+        $("button:last").click(function() {
+            var left = $boy.css('left');
+            $boy.css('left',left);
+            $boy.addClass('pauseWalk');
         });
     </script>
 </body>
