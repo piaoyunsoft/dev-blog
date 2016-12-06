@@ -9,6 +9,76 @@
 </head>
 
 <body>
+	<!-- help-block -->
+	<h3>help-block</h3>
+	<form role="form">
+		<div class="form-group has-success has-feedback">
+		<label class="control-label" for="inputSuccess1">success status</label>
+		<input type="text" class="form-control" id="inputSuccess1" placeholder="success status">
+		<span class="help-block">your input is right</span>
+		<span class="glyphicon glyphicon-ok form-control-feedback"></span>
+		</div>
+	</form>
+	<hr />
+	<!-- form: verified -->
+	<h3>form: verified</h3>
+	<div class="form-group has-error has-feedback">
+		<label class="control-label" for="inputError1">email address</label>
+		<input type="text" class="form-control" id="inputError1" placeholder="error status">
+		<span class="glyphicon glyphicon-remove form-control-feedback"></span>
+	</div>
+	<hr />
+	<!-- form: disabled -->
+	<h3>form: disabled</h3>
+	<div class="form-group">
+		<input class="form-control" type="text" placeholder="disabled,can't input" disabled>
+	</div>
+	<hr />
+	<!-- form focus -->
+	<h3>form: focus</h3>
+	<form role="form" class="form-horizontal">
+		<div class="form-group">
+			<!-- <div class="col-xs-6">
+				<input class="form-control input-lg" type="file" placeholder="focus">
+			</div> -->
+			<div class="col-xs-6">
+		      <input class="form-control input-lg" type="text" placeholder="focus">
+		    </div>
+		</div>
+	</form>
+	<hr />
+	<!-- radio-inline -->
+	<h3>radio-inline</h3>
+	<form role="form">
+		<label class="radio-inline">
+			<input type="radio" value="option1" name="sex">male
+		</label>
+		<label class="radio-inline">
+			<input type="radio" value="option2" name="sex">female
+		</label>
+		<label class="radio-inline">
+			<input type="radio" value="option3" name="sex">neutral
+		</label>
+	</form>
+	<hr />
+	<!-- checkbox -->
+	<h3>checkbox</h3>
+	<div class="checkbox">
+		<label>
+			<input type="checkbox" value="">remember password
+		</label>
+	</div>
+	<div class="radio">
+		<label>
+			<input type="radio" name="optionsRadios" id="optionsRadios1" value="love" checked>like
+		</label>
+	</div>
+	<div class="radio">
+		<label>
+			<input type="radio" name="optionsRadios" id="optionsRadios2" value="love" checked>unlike
+		</label>
+	</div>
+	<hr />
 	<!-- textarea -->
 	<p>textarea</p>
 	<form role="form">
