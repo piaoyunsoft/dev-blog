@@ -6,9 +6,64 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
 <title>段落（正文文本）</title>
 <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+<script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script> 
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+	<!-- button type -->
+	<h3>button type</h3>
+	<button type="button" class="btn btn-default">
+		<span class="glyphicon glyphicon-play"></span>
+	</button>
+	<hr />
+	<!-- dropdown -->
+	<h3>dropdown</h3>
+	<div class="dropdown">
+		<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+		dropmenu
+		<span class="caret"></span>
+		</button>
+		<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+			<li role="presentation" class="dropdown-header">first header</li>
+			<li role="presentation"><a role="menuitem" tabindex="-1" href="#">item1</a></li>
+			<li role="presentation" class="divider"></li>
+			<li role="presentation" class="disabled"><a role="menuitem" tabindex="-1" href="#">item2</a></li>
+		</ul>
+	</div>
+	<hr />
+	<!-- row -->
+	<h3>row</h3>
+	<div class="row">
+	    <div class="col-md-1">1</div>
+	    <div class="col-md-1">1</div>
+	    <div class="col-md-1">1</div>
+	    <div class="col-md-1">1</div>
+	  </div>
+	  <hr />
+	<!-- icon -->
+	<h3>icon</h3>
+	<span class="glyphicon glyphicon-search"></span>
+	<span class="glyphicon glyphicon-plus"></span>
+	<hr />
+	<!-- image -->
+	<h3>image</h3>
+	<img class="img-rounded" alt="100x100" src="http://placehold.it/140x140">
+	<hr />
+	<!-- button-disabled -->
+	<h3>button-disabled</h3>
+	<button class="btn btn-primary btn-lg btn-block" type="button" disabled="disabled">button-disabled</button>
+	<hr />
+	<!-- button-block -->
+	<h3>button-block</h3>
+	<button class="btn btn-primary btn-lg btn-block" type="button">btn-block</button>
+	<hr />
+	<!-- button -->
+	<h3>button</h3>
+	<button class="btn btn-default" type="button">base button</button>
+	<button class="btn btn-primary" type="button">base button</button>
+	<hr />
 	<!-- help-block -->
 	<h3>help-block</h3>
 	<form role="form">
