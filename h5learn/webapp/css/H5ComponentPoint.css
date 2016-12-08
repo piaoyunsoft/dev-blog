@@ -1,0 +1,7 @@
+.h5_component_point {
+
+}
+.h5_component_point .point {
+	display: block;
+	background-color: #ccc;
+}
