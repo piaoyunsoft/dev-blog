@@ -6,9 +6,10 @@
 	<script type="text/javascript" src="../js/lib/jquery.js"></script>
 	<script type="text/javascript" src="../js/H5ComponentBase.js"></script>
 	<link rel="stylesheet" type="text/css" href="../css/H5ComponentBase.css">
-	<script type="text/javascript" src="../js/H5ComponentPoint.js"></script>
-	<link rel="stylesheet" type="text/css" href="../css/H5ComponentPoint.css">
-	<title>test-H5ComponentPoint</title>
+
+	<script type="text/javascript" src="../js/H5ComponentBar.js"></script>
+	<link rel="stylesheet" type="text/css" href="../css/H5ComponentBar.css">
+	<title>test-H5ComponentPolyLine</title>
 	<style type="text/css">
 		body {
 			margin: 0;
@@ -32,29 +33,33 @@
 	</div>
 	<script type="text/javascript">
 		var cfg = {
-			type: 'point',
-			width: 300,
-			height: 300,
+			type: 'bar',
+			width: 530,
+			height: 600,
 			data: [
-				['A项', .4, 'green'],
-				['B项', .2, 'yellow', 0, '-60%'],
-				['C项', .1, 'red', 0, '120%']
+				['Javascript', .4, '#ff7676'],
+				['HTML/CSS', .2, '#99C0FC'],
+				['CSS3', .1],
+				['HTML5', .2],
+				['jQuery', .35],
+				['Bootstrap', .05],
+				['AngularJs', .09]
 			],
 			css: {
-				bottom: 0,
-				opacity: 0,
+				top: 100,
+				opacity: 0
 			},
 			animateIn: {
-				bottom: '40%',
+				top: 200,
 				opacity: 1,
 			},
 			animateOut: {
-				bottom: 0,
+				top: 100,
 				opacity: 0,
 			},
 			center: true,
 		}
-		var h5 = new H5ComponentPoint('myName', cfg);
+		var h5 = new H5ComponentBar('myBarComponent', cfg);
 		$('.iphone').append(h5);
 
 		var leave = true;
