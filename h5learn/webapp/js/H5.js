@@ -1,3 +1,5 @@
+var jdata = [];
+
 var H5 = function() {
 	this.id = ('h5_' + Math.random()).replace('.','_');
 	this.el = $('<div class="h5" id="' + this.id + '">').hide();
@@ -6,6 +8,7 @@ var H5 = function() {
 
 	// 新增一个页
 	this.addPage = function(name, text) {
+		jdata.push({isPage:true,name:name,text:text});
 		var page = $('<div class="h5_page section">');
 		if(name != undefined) {
 			page.addClass('h5_page_' + name);
@@ -24,6 +27,7 @@ var H5 = function() {
 
 	// 新增一个组件
 	this.addComponent = function(name, cfg) {
+		jdata.push({isPage:false,name:name,cfg:cfg});
 		var cfg = cfg || {};
 		cfg = $.extend({
 			type: 'base'
@@ -56,6 +60,8 @@ var H5 = function() {
 		page.append(component);
 		return this;
 	}
+
+	// H5对象初始化呈现
 	this.loader = function(firstPage) {
 		this.el.fullpage({
 			onLeave:function(index, nextIndex, direction) {
@@ -72,5 +78,7 @@ var H5 = function() {
 			$.fn.fullpage.moveTo(firstPage);
 		}
 	}
+
+	this.loader = typeof H5_loading == 'function' ? H5_loading : this.loader;
 	return this;
 }
