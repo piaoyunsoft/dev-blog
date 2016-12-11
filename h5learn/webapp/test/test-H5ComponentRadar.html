@@ -7,8 +7,9 @@
 	<script type="text/javascript" src="../js/H5ComponentBase.js"></script>
 	<link rel="stylesheet" type="text/css" href="../css/H5ComponentBase.css">
 
-	<script type="text/javascript" src="../js/H5ComponentPolyline.js"></script>
-	<link rel="stylesheet" type="text/css" href="../css/H5ComponentPolyline.css">
+	<!-- 引入雷达图的资源 -->
+	<script type="text/javascript" src="../js/H5ComponentRadar.js"></script>
+	<link rel="stylesheet" type="text/css" href="../css/H5ComponentRadar.css">
 	<title>test-H5ComponentPoint</title>
 	<style type="text/css">
 		body {
@@ -34,18 +35,18 @@
 	<script type="text/javascript">
 		var cfg = {
 			type: 'radar',
-			width: 540,
-			height: 600,
+			width: 400,
+			height: 400,
 			data: [
-				['Javascript', .4, '#ff7676'],
-				['HTML/CSS', .2, '#99C0FC'],
-				['CSS3', .3],
-				['HTML5', .2],
-				['jQuery', .35]
+				['Javascript', .9, '#ff7676'],
+				['HTML/CSS', .8, '#99C0FC'],
+				['CSS3', .7],
+				['HTML5', .6],
+				['jQuery', .5]
 			],
 			css: {
-				top: 200,
-				opacity: 0,
+				top: 100,
+				opacity: 0
 			},
 			animateIn: {
 				opacity: 1,
@@ -57,7 +58,7 @@
 			},
 			center: true,
 		}
-		var h5 = new H5ComponentPolyline('myBarComponent', cfg);
+		var h5 = new H5ComponentRadar('myBarComponent', cfg);
 		$('.iphone').append(h5);
 
 		var leave = true;
