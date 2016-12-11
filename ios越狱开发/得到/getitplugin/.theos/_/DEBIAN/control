@@ -1,0 +1,10 @@
+Package: com.yourcompany.getitplugin
+Name: getitplugin
+Depends: mobilesubstrate
+Architecture: iphoneos-arm
+Description: An awesome MobileSubstrate tweak!
+Maintainer: wuxueying
+Author: wuxueying
+Section: Tweaks
+Version: 0.0.1-45+debug
+Installed-Size: 56
