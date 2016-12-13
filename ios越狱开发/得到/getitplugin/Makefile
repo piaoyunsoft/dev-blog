@@ -1,7 +1,7 @@
 THEOS_DEVICE_IP = localhost
 THEOS_DEVICE_PORT = 2223
 
-ARCHS = armv7
+ARCHS = armv7 arm64
 
 include /opt/theos/makefiles/common.mk
 
