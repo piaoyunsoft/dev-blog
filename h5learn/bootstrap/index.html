@@ -7,43 +7,39 @@
     <title>现代浏览器博物馆</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
-    <!--[if lt IE 9]>
-    <script src="js/html5shiv.js"></script>
-    <script src="js/respond.min.js"></script>
-    <![endif]-->
-
     <style>
-
         body {
             padding-top: 50px;
             padding-bottom: 40px;
             color: #5a5a5a;
         }
-
         /* 轮播广告 */
-
         .carousel {
             height: 500px;
             margin-bottom: 60px;
         }
-
         .carousel .item {
             height: 500px;
             background-color: #000;
         }
-
         .carousel .item img {
             width: 100%;
         }
-
         .carousel-caption {
             z-index: 10;
         }
-
         .carousel-caption p {
             margin-bottom: 20px;
             font-size: 20px;
             line-height: 1.8;
+        }
+
+        #summary-container .col-md-4 {
+        	text-align: center;
+        }
+
+        hr.divider {
+        	margin: 40px 0;
         }
     </style>
 
@@ -166,6 +162,31 @@
 	            class="glyphicon glyphicon-chevron-left"></span></a>
 	    <a class="right carousel-control" href="#ad-carousel" data-slide="next"><span
 	            class="glyphicon glyphicon-chevron-right"></span></a>
+	</div>
+
+	<!-- 主要内容 -->
+	<div class="container" id="summary-container">
+		<div class="row">
+			<div class="col-md-4">
+				<img class="img-circle" src="images/chrome-logo-small.jpg" alt="chrome">
+				<h2>Chrome</h2>
+				<p>Mozilla Firefox, 中文名通常称为"火狐"或"火狐浏览器", 是一个开源网页浏览器. </p>
+				<p><a class="btn btn-default" href="#" role="button">点我下载</a></p>
+			</div>
+			<div class="col-md-4">
+				<img class="img-circle" src="images/firefox-logo-small.jpg" alt="firefox">
+				<h2>Firefox</h2>
+				<p>Mozilla Firefox, 中文名通常称为"火狐"或"火狐浏览器", 是一个开源网页浏览器. </p>
+				<p><a class="btn btn-default" href="#" role="button">点我下载</a></p>
+			</div>
+			<div class="col-md-4">
+				<img class="img-circle" src="images/safari-logo-small.jpg" alt="safari">
+				<h2>Safari</h2>
+				<p>Mozilla Firefox, 中文名通常称为"火狐"或"火狐浏览器", 是一个开源网页浏览器. </p>
+				<p><a class="btn btn-default" href="#" role="button">点我下载</a></p>
+			</div>
+		</div>
+		<hr class="divider">
 	</div>
 
     <script src="js/jquery-1.11.1.min.js"></script>
