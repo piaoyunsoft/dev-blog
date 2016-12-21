@@ -41,6 +41,21 @@
         hr.divider {
         	margin: 40px 0;
         }
+
+        .feathure {
+        	padding: 30px 0;
+        }
+
+        .feature-heading {
+        	font-size: 50px;
+        	color: #2a6496;
+        	margin-top: 120px;
+        }
+
+        .feature-heading .text-muted {
+        	font-size: 28px;
+        	color: #999;
+        }
     </style>
 
   </head>
@@ -165,8 +180,9 @@
 	</div>
 
 	<!-- 主要内容 -->
-	<div class="container" id="summary-container">
-		<div class="row">
+	<div class="container summary">
+		<!-- 简介 -->
+		<div class="row" id="summary-container">
 			<div class="col-md-4">
 				<img class="img-circle" src="images/chrome-logo-small.jpg" alt="chrome">
 				<h2>Chrome</h2>
@@ -186,7 +202,75 @@
 				<p><a class="btn btn-default" href="#" role="button">点我下载</a></p>
 			</div>
 		</div>
+
 		<hr class="divider">
+
+		<!-- 特性 -->
+		<ul class="nav nav-tabs" role="tablist">
+			<li class="active"><a href="#tab-chrome" role="tab" data-toggle="tab">Chrome</a></li>
+			<li><a href="#tab-firefox" role="tab" data-toggle="tab">Firefox</a></li>
+			<li><a href="#tab-safari" role="tab" data-toggle="tab">Safari</a></li>
+			<li><a href="#tab-opera" role="tab" data-toggle="tab">Opera</a></li>
+			<li><a href="#tab-ie" role="tab" data-toggle="tab">IE</a></li>
+		</ul>
+
+		<div class="tab-content">
+			<div class="tab-pane active" id="tab-chrome">
+				<div class="row feature">
+					<div class="col-md-7">
+						<h2 class="feature-heading">Google Chrome <span class="text-muted">使用最广的浏览器</span></h2>
+						<p class="lead">Chrome 可将您在计算机上打开的标签页、保存的书签和最近搜索过的内容同步到手机或平板电脑上，反之亦然。这意味着您可将自己在 Chrome 中的内容和设置同步到所有的设备上。只需登录您的其他设备即可开始同步</p>
+					</div>
+					<div class="col-md-5">
+						<img class="feahture-image img-responsive" src="images/chrome-logo.jpg" alt="Chrome">
+					</div>
+				</div>
+			</div>
+			<div class="tab-pane" id="tab-firefox">
+				<div class="row feature">
+					<div class="col-md-5">
+						<img class="feahture-image img-responsive" src="images/firefox-logo.jpg" alt="Chrome">
+					</div>
+					<div class="col-md-7">
+						<h2 class="feature-heading">Google Chrome <span class="text-muted">使用最广的浏览器</span></h2>
+						<p class="lead">Chrome 可将您在计算机上打开的标签页、保存的书签和最近搜索过的内容同步到手机或平板电脑上，反之亦然。这意味着您可将自己在 Chrome 中的内容和设置同步到所有的设备上。只需登录您的其他设备即可开始同步</p>
+					</div>
+				</div>
+			</div>
+			<div class="tab-pane" id="tab-safari">
+				<div class="row feature">
+					<div class="col-md-7">
+						<h2 class="feature-heading">Google Chrome <span class="text-muted">使用最广的浏览器</span></h2>
+						<p class="lead">Chrome 可将您在计算机上打开的标签页、保存的书签和最近搜索过的内容同步到手机或平板电脑上，反之亦然。这意味着您可将自己在 Chrome 中的内容和设置同步到所有的设备上。只需登录您的其他设备即可开始同步</p>
+					</div>
+					<div class="col-md-5">
+						<img class="feahture-image img-responsive" src="images/safari-logo.jpg" alt="Chrome">
+					</div>
+				</div>
+			</div>
+			<div class="tab-pane" id="tab-opera">
+				<div class="row feature">
+					<div class="col-md-5">
+						<img class="feahture-image img-responsive" src="images/opera-logo.jpg" alt="Chrome">
+					</div>
+					<div class="col-md-7">
+						<h2 class="feature-heading">Google Chrome <span class="text-muted">使用最广的浏览器</span></h2>
+						<p class="lead">Chrome 可将您在计算机上打开的标签页、保存的书签和最近搜索过的内容同步到手机或平板电脑上，反之亦然。这意味着您可将自己在 Chrome 中的内容和设置同步到所有的设备上。只需登录您的其他设备即可开始同步</p>
+					</div>
+				</div>
+			</div>
+			<div class="tab-pane" id="tab-ie">
+				<div class="row feature">
+					<div class="col-md-7">
+						<h2 class="feature-heading">Google Chrome <span class="text-muted">使用最广的浏览器</span></h2>
+						<p class="lead">Chrome 可将您在计算机上打开的标签页、保存的书签和最近搜索过的内容同步到手机或平板电脑上，反之亦然。这意味着您可将自己在 Chrome 中的内容和设置同步到所有的设备上。只需登录您的其他设备即可开始同步</p>
+					</div>
+					<div class="col-md-5">
+						<img class="feahture-image img-responsive" src="images/ie-logo.jpg" alt="Chrome">
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
 
     <script src="js/jquery-1.11.1.min.js"></script>
