@@ -1,498 +1,500 @@
 <!DOCTYPE HTML>
 <html>
+
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" >
-	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
-<title>段落（正文文本）</title>
-<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
-<script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
-  <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script> 
-<link rel="stylesheet" href="style.css">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <title>段落（正文文本）</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-	<!-- import js plugin -->
-	<h3>import js plugin</h3>
-	<!-- <script>
+    <!-- import js plugin -->
+    <h3>import js plugin</h3>
+    <!-- <script>
 	  $(function(){
 	    $(".btn").click(function(){
 	      $("#mymodal").modal("toggle");
 	    });
 	  });
 	</script> -->
-	<button class="btn btn-primary" type="button" data-toggle="modal" data-target="#mymodal-data">click</button>
-	<div class="modal fade bs-example-modal-sm" tabindex="-1" id="mymodal-data">
-	    <div class="modal-dialog">
-	        <div class="modal-content">
-	    		<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-					<h4 class="modal-title">title</h4>
-				</div>
-				<div class="modal-body">
-					<p>body</p>
-				</div>
-				<div class="modal-footer">
-					<button type="button" class="btn btn-default" data-dismiss="modal">close</button>
-					<button type="button" class="btn btn-primary">save</button>
-				</div>
-			</div><!-- /.modal-content -->
-		</div><!-- /.modal-dialog -->
-	</div>
-	<hr/>
-	<!-- panel -->
-	<h3>panel</h3>
-		<div class="panel panel-default">
-			<div class="panel-body">I'm a panel-defalut</div>
-		</div>
-		<br/>
-		<div class="panel panel-primary">
-			<div class="panel-heading">panel-heading</div>
-			<div class="panel-body">
-				<p>Boeing shares fell more than 1% after the president-elect's tweet, but recovered most of their losses in afternoon trading</p>
-				<ul class="list-group">
-					<li class="list-group-item">item1</li>
-					<li class="list-group-item">item2</li>
-				</ul>
-			</div>
-			<div class="panel-footer">author: xueyingwu</div>
-		</div>
-	<hr/>
-	<!-- list-group active -->
-	<h3>list-group active</h3>
-		<div class="list-group">
-			<a href="" class="list-group-item active">css3</a>
-			<a href="" class="list-group-item list-group-item-info">html</a>
-		</div>
-	<hr/>
-	<!-- list-group -->
-	<h3>list-group</h3>
-		<ul class="list-group">
-			<li class="list-group-item"><span class="badge">13</span><a href="">objc</a></li>
-			<li class="list-group-item"><span class="badge">13</span>java</li>
-			<li class="list-group-item"><span class="badge">13</span>python</li>
-			<li class="list-group-item"><span class="badge">13</span>php</li>
-		</ul>
-	<hr/>
-	<!-- media -->
-	<h3>media</h3>
-	<div class="media">
-		<a class="pull-left" href="">
-			<img class="media-object" src="http://a.disquscdn.com/uploads/users/3740/2069/avatar92.jpg?1406972031" alt="...">
-		</a>
-		<div class="media-body">
-			<h4 class="media-heading">learn css3</h4>
-			<div>Boeing shares fell more than 1% after the president-elect's tweet, but recovered most of their losses in afternoon trading.</div>
-		</div>
-	</div>
-	<hr/>
-	<!-- progressbar -->
-	<h3>progressbar percent</h3>
-		<div class="progress">
-			<div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">20%</div>
-		</div>
-	<hr/>
-	<!-- progress -->
-	<h3>progress</h3>
-	<div class="progress">
-		<div class="progress-bar" style="width:40%">
-		</div>
-	</div>
-	<hr/>
-	<!-- alert dismissable -->
-	<h3>alert dismissable</h3>
-	<div class="alert alert-success alert-dismissable" role="alert">
-		<button class="close" type="button" data-dismiss="alert">&times;</button>
-		alert can dismiss!
-	</div>
-	<hr/>
-	<!-- alert -->
-	<h3>alert</h3>
-	<div class="alert alert-success" role="alert">work success!</div>
-	<hr/>
-	<!-- thumbnail -->
-	<h3>thumbnail</h3>
-	<a href="#" class="thumbnail">
-		<img alt="100%x180" src="http://img.mukewang.com/5434eba100014fe906000338.png" style="height: 180px;width: 100%;display: block;">
-	</a>
-	<hr/>
-
-	<!-- badge -->
-	<h3>badge</h3>
-	<a href="">Home <span class="badge">12</span></a>
-	<hr/>
-	<!-- label -->
-	<h3>label</h3>
-	<span class="label label-default">default-label</span>
-	<span class="label label-primary">primary-label</span>
-	<hr/>
-	<!-- pager -->
-	<h3>pager</h3>
-	<ul class="pager">
-		<li><a href="">&laquo;previous</a></li>
-		<li><a href="">next&raquo;</a></li>
-	</ul>
-	<hr/>
-	<!-- pagination -->
-	<h3>pagination</h3>
-	<ul class="pagination pagination-lg">
-		<li><a href="">&laquo;</a></li>
-		<li><a href="">1</a></li>
-		<li><a href="">2</a></li>
-		<li class="active"><a href="">3</a></li>
-		<li><a href="">4</a></li>
-		<li><a href="">5</a></li>
-		<li class="disable"><a href="">&raquo;</a></li>
-	</ul>
-	<hr/>
-	<!-- navbar-inverse -->
-	<h3>navbar-inverse</h3>
-	<div class="navbar navbar-inverse" role="navigation">
-		<div class="navbar-header">
-			<a href="#" class="navbar-brand">DIA</a>
-		</div>
-		<ul class="nav navbar-nav">
-			<li class="active"><a href="">Home</a></li>
-			<li><a href="">Tech</a></li>
-			<li><a href="">About</a></li>
-		</ul>
-	</div>
-	<hr />
-	<!-- navbar-collapse -->
-	<h3>navbar-collapse</h3>
-	<div class="navbar navbar-default" role="navigation">
-	  <div class="navbar-header">
-	       <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-responsive-collapse">
-	         <span class="sr-only">Toggle Navigation</span>
-	         <span class="icon-bar"></span>
-	         <span class="icon-bar"></span>
-	         <span class="icon-bar"></span>
-	       </button>
-	       <a href="##" class="navbar-brand">Home</a>
-	  </div>
-	  <div class="collapse navbar-collapse navbar-responsive-collapse">
-	    	<ul class="nav navbar-nav">
-	      		<li class="active"><a href="##">First</a></li>
-	      		<li><a href="##">Second</a></li>
-	      		<li><a href="##">Third</a></li>
-	      		<li><a href="##">Four</a></li>
-	      		<li><a href="##">Fifth</a></li>
-		 	</ul>
-	  </div>
-	</div>
-	<hr />
-	<!-- navbar -->
-	<h3>navbar</h3>
-	<div class="navbar navbar-default" role="navigation">
-		<ul class="nav navbar-nav">
-			<li class="active"><a href="#">Home</a></li>
-			<li><a href="#">Tech</a></li>
-			<li><a href="#">Info</a></li>
-			<li><a href="#">Example</a></li>
-			<li><a href="#">About</a></li>
-			<form action="##" class="navbar-form navbar-left" rol="search">
-		   	<div class="form-group">
-		   		<input type="text" class="form-control" placeholder="input..." />
-		   	</div>
-		     <button type="submit" class="btn btn-default">search</button>
-		   </form>
-		</ul>
-	</div>
-	<hr />
-	<!-- breadcrumb -->
-	<h3>breadcrumb</h3>
-	<ol class="breadcrumb">
-		<li><a href="#">Home</a></li>
-		<li><a href="#">Book</a></li>
-		<li class="active">CSS3</li>
-	</ol>
-	<hr />
-	<!-- nav-dropdown-toggle -->
-	<h3>nav-dropdown-toggle</h3>
-	<ul class="nav nav-pills">
-		<li class="active"><a href="#">Home</a></li>
-		<li class="dropdown">
-			<a href="#" class="dropdown-toggle" data-toggle="dropdown">Tech<span class="caret"></span></a>
-			<ul class="dropdown-menu">
-				<li><a href="#">CSS2</a></li>
-				<li><a href="#">Sass</a></li>
-				<li><a href="#">jQuery</a></li>
-				<li><a href="#">Responsive</a></li>
-			</ul>
-		</li>
-		<li><a href="#">About</a></li>
-	</ul>
-	<hr />
-	<!-- nav-stacked -->
-	<h3>nav-stacked</h3>
-	<ul class="nav nav-pills nav-stacked">
-		<li class="active"><a href="#">Home</a></li>
-		<li><a href="#">CSS3</a></li>
-		<li><a href="#">Sass</a></li>
-		<li><a href="#">jQuery</a></li>
-		<li class="disabled"><a href="#">Responsive</a></li>
-	</ul>
-	<hr />
-	<!-- nav-pills -->
-	<h3>nav-pills</h3>
-	<ul class="nav nav-pills">
-		<li class="active"><a href="##">Home</a></li>
-		<li><a href="##">CSS3</a></li>
-		<li><a href="##">Sass</a></li>
-		<li><a href="##">jQuery</a></li>
-		<li class="disabled"><a href="##">Responsive</a></li>
-	</ul>
-	<hr />
-	<!-- nav-tabs -->
-	<h3>nav-tabs</h3>
-	<ul class="nav nav-tabs">
-		<li class="active"><a href="##">Home</a></li>
-		<li><a href="##">CSS3</a></li>
-		<li><a href="##">Sass</a></li>
-		<li><a href="##">jQuery</a></li>
-		<li><a href="##">Responsive</a></li>
-	</ul>
-	<hr />
-	<!-- button-group-justified -->
-	<div class="btn-wrap">
-		<div class="btn-group btn-group-justified">
-			<a class="btn btn-default" href="#">Home</a>
-			<a class="btn btn-default" href="#">Product</a>
-			<a class="btn btn-default" href="#">Analysize</a>
-			<a class="btn btn-default" href="#">Contract</a>
-		</div>
-	</div>
-	<hr />
-	<!-- button type -->
-	<h3>button type</h3>
-	<button type="button" class="btn btn-default">
-		<span class="glyphicon glyphicon-play"></span>
-	</button>
-	<hr />
-	<!-- dropdown -->
-	<h3>dropdown</h3>
-	<div class="dropdown">
-		<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
-		dropmenu
-		<span class="caret"></span>
-		</button>
-		<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-			<li role="presentation" class="dropdown-header">first header</li>
-			<li role="presentation"><a role="menuitem" tabindex="-1" href="#">item1</a></li>
-			<li role="presentation" class="divider"></li>
-			<li role="presentation" class="disabled"><a role="menuitem" tabindex="-1" href="#">item2</a></li>
-		</ul>
-	</div>
-	<hr />
-	<!-- row -->
-	<h3>row</h3>
-	<div class="row">
-	    <div class="col-md-1">1</div>
-	    <div class="col-md-1">1</div>
-	    <div class="col-md-1">1</div>
-	    <div class="col-md-1">1</div>
-	  </div>
-	  <hr />
-	<!-- icon -->
-	<h3>icon</h3>
-	<span class="glyphicon glyphicon-search"></span>
-	<span class="glyphicon glyphicon-plus"></span>
-	<hr />
-	<!-- image -->
-	<h3>image</h3>
-	<img class="img-rounded" alt="100x100" src="http://placehold.it/140x140">
-	<hr />
-	<!-- button-disabled -->
-	<h3>button-disabled</h3>
-	<button class="btn btn-primary btn-lg btn-block" type="button" disabled="disabled">button-disabled</button>
-	<hr />
-	<!-- button-block -->
-	<h3>button-block</h3>
-	<button class="btn btn-primary btn-lg btn-block" type="button">btn-block</button>
-	<hr />
-	<!-- button -->
-	<h3>button</h3>
-	<button class="btn btn-default" type="button">base button</button>
-	<button class="btn btn-primary" type="button">base button</button>
-	<hr />
-	<!-- help-block -->
-	<h3>help-block</h3>
-	<form role="form">
-		<div class="form-group has-success has-feedback">
-		<label class="control-label" for="inputSuccess1">success status</label>
-		<input type="text" class="form-control" id="inputSuccess1" placeholder="success status">
-		<span class="help-block">your input is right</span>
-		<span class="glyphicon glyphicon-ok form-control-feedback"></span>
-		</div>
-	</form>
-	<hr />
-	<!-- form: verified -->
-	<h3>form: verified</h3>
-	<div class="form-group has-error has-feedback">
-		<label class="control-label" for="inputError1">email address</label>
-		<input type="text" class="form-control" id="inputError1" placeholder="error status">
-		<span class="glyphicon glyphicon-remove form-control-feedback"></span>
-	</div>
-	<hr />
-	<!-- form: disabled -->
-	<h3>form: disabled</h3>
-	<div class="form-group">
-		<input class="form-control" type="text" placeholder="disabled,can't input" disabled>
-	</div>
-	<hr />
-	<!-- form focus -->
-	<h3>form: focus</h3>
-	<form role="form" class="form-horizontal">
-		<div class="form-group">
-			<!-- <div class="col-xs-6">
+    <button class="btn btn-primary" type="button" data-toggle="modal" data-target="#mymodal-data">click</button>
+    <div class="modal fade bs-example-modal-sm" tabindex="-1" id="mymodal-data">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                    <h4 class="modal-title">title</h4>
+                </div>
+                <div class="modal-body">
+                    <p>body</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">close</button>
+                    <button type="button" class="btn btn-primary">save</button>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+    <hr/>
+    <!-- panel -->
+    <h3>panel</h3>
+    <div class="panel panel-default">
+        <div class="panel-body">I'm a panel-defalut</div>
+    </div>
+    <br/>
+    <div class="panel panel-primary">
+        <div class="panel-heading">panel-heading</div>
+        <div class="panel-body">
+            <p>Boeing shares fell more than 1% after the president-elect's tweet, but recovered most of their losses in afternoon trading</p>
+            <ul class="list-group">
+                <li class="list-group-item">item1</li>
+                <li class="list-group-item">item2</li>
+            </ul>
+        </div>
+        <div class="panel-footer">author: xueyingwu</div>
+    </div>
+    <hr/>
+    <!-- list-group active -->
+    <h3>list-group active</h3>
+    <div class="list-group">
+        <a href="" class="list-group-item active">css3</a>
+        <a href="" class="list-group-item list-group-item-info">html</a>
+    </div>
+    <hr/>
+    <!-- list-group -->
+    <h3>list-group</h3>
+    <ul class="list-group">
+        <li class="list-group-item"><span class="badge">13</span><a href="">objc</a></li>
+        <li class="list-group-item"><span class="badge">13</span>java</li>
+        <li class="list-group-item"><span class="badge">13</span>python</li>
+        <li class="list-group-item"><span class="badge">13</span>php</li>
+    </ul>
+    <hr/>
+    <!-- media -->
+    <h3>media</h3>
+    <div class="media">
+        <a class="pull-left" href="">
+            <img class="media-object" src="http://a.disquscdn.com/uploads/users/3740/2069/avatar92.jpg?1406972031" alt="...">
+        </a>
+        <div class="media-body">
+            <h4 class="media-heading">learn css3</h4>
+            <div>Boeing shares fell more than 1% after the president-elect's tweet, but recovered most of their losses in afternoon trading.</div>
+        </div>
+    </div>
+    <hr/>
+    <!-- progressbar -->
+    <h3>progressbar percent</h3>
+    <div class="progress">
+        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">20%</div>
+    </div>
+    <hr/>
+    <!-- progress -->
+    <h3>progress</h3>
+    <div class="progress">
+        <div class="progress-bar" style="width:40%">
+        </div>
+    </div>
+    <hr/>
+    <!-- alert dismissable -->
+    <h3>alert dismissable</h3>
+    <div class="alert alert-success alert-dismissable" role="alert">
+        <button class="close" type="button" data-dismiss="alert">&times;</button>
+        alert can dismiss!
+    </div>
+    <hr/>
+    <!-- alert -->
+    <h3>alert</h3>
+    <div class="alert alert-success" role="alert">work success!</div>
+    <hr/>
+    <!-- thumbnail -->
+    <h3>thumbnail</h3>
+    <a href="#" class="thumbnail">
+        <img alt="100%x180" src="http://img.mukewang.com/5434eba100014fe906000338.png" style="height: 180px;width: 100%;display: block;">
+    </a>
+    <hr/>
+    <!-- badge -->
+    <h3>badge</h3>
+    <a href="">Home <span class="badge">12</span></a>
+    <hr/>
+    <!-- label -->
+    <h3>label</h3>
+    <span class="label label-default">default-label</span>
+    <span class="label label-primary">primary-label</span>
+    <hr/>
+    <!-- pager -->
+    <h3>pager</h3>
+    <ul class="pager">
+        <li><a href="">&laquo;previous</a></li>
+        <li><a href="">next&raquo;</a></li>
+    </ul>
+    <hr/>
+    <!-- pagination -->
+    <h3>pagination</h3>
+    <ul class="pagination pagination-lg">
+        <li><a href="">&laquo;</a></li>
+        <li><a href="">1</a></li>
+        <li><a href="">2</a></li>
+        <li class="active"><a href="">3</a></li>
+        <li><a href="">4</a></li>
+        <li><a href="">5</a></li>
+        <li class="disable"><a href="">&raquo;</a></li>
+    </ul>
+    <hr/>
+    <!-- navbar-inverse -->
+    <h3>navbar-inverse</h3>
+    <div class="navbar navbar-inverse" role="navigation">
+        <div class="navbar-header">
+            <a href="#" class="navbar-brand">DIA</a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="">Home</a></li>
+            <li><a href="">Tech</a></li>
+            <li><a href="">About</a></li>
+        </ul>
+    </div>
+    <hr />
+    <!-- navbar-collapse -->
+    <h3>navbar-collapse</h3>
+    <div class="navbar navbar-default" role="navigation">
+        <div class="navbar-header">
+            <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                <span class="sr-only">Toggle Navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="##" class="navbar-brand">Home</a>
+        </div>
+        <div class="collapse navbar-collapse navbar-responsive-collapse">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="##">First</a></li>
+                <li><a href="##">Second</a></li>
+                <li><a href="##">Third</a></li>
+                <li><a href="##">Four</a></li>
+                <li><a href="##">Fifth</a></li>
+            </ul>
+        </div>
+    </div>
+    <hr />
+    <!-- navbar -->
+    <h3>navbar</h3>
+    <div class="navbar navbar-default" role="navigation">
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#">Tech</a></li>
+            <li><a href="#">Info</a></li>
+            <li><a href="#">Example</a></li>
+            <li><a href="#">About</a></li>
+            <form action="##" class="navbar-form navbar-left" rol="search">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="input..." />
+                </div>
+                <button type="submit" class="btn btn-default">search</button>
+            </form>
+        </ul>
+    </div>
+    <hr />
+    <!-- breadcrumb -->
+    <h3>breadcrumb</h3>
+    <ol class="breadcrumb">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Book</a></li>
+        <li class="active">CSS3</li>
+    </ol>
+    <hr />
+    <!-- nav-dropdown-toggle -->
+    <h3>nav-dropdown-toggle</h3>
+    <ul class="nav nav-pills">
+        <li class="active"><a href="#">Home</a></li>
+        <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Tech<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+                <li><a href="#">CSS2</a></li>
+                <li><a href="#">Sass</a></li>
+                <li><a href="#">jQuery</a></li>
+                <li><a href="#">Responsive</a></li>
+            </ul>
+        </li>
+        <li><a href="#">About</a></li>
+    </ul>
+    <hr />
+    <!-- nav-stacked -->
+    <h3>nav-stacked</h3>
+    <ul class="nav nav-pills nav-stacked">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#">CSS3</a></li>
+        <li><a href="#">Sass</a></li>
+        <li><a href="#">jQuery</a></li>
+        <li class="disabled"><a href="#">Responsive</a></li>
+    </ul>
+    <hr />
+    <!-- nav-pills -->
+    <h3>nav-pills</h3>
+    <ul class="nav nav-pills">
+        <li class="active"><a href="##">Home</a></li>
+        <li><a href="##">CSS3</a></li>
+        <li><a href="##">Sass</a></li>
+        <li><a href="##">jQuery</a></li>
+        <li class="disabled"><a href="##">Responsive</a></li>
+    </ul>
+    <hr />
+    <!-- nav-tabs -->
+    <h3>nav-tabs</h3>
+    <ul class="nav nav-tabs">
+        <li class="active"><a href="##">Home</a></li>
+        <li><a href="##">CSS3</a></li>
+        <li><a href="##">Sass</a></li>
+        <li><a href="##">jQuery</a></li>
+        <li><a href="##">Responsive</a></li>
+    </ul>
+    <hr />
+    <!-- button-group-justified -->
+    <div class="btn-wrap">
+        <div class="btn-group btn-group-justified">
+            <a class="btn btn-default" href="#">Home</a>
+            <a class="btn btn-default" href="#">Product</a>
+            <a class="btn btn-default" href="#">Analysize</a>
+            <a class="btn btn-default" href="#">Contract</a>
+        </div>
+    </div>
+    <hr />
+    <!-- button type -->
+    <h3>button type</h3>
+    <button type="button" class="btn btn-default">
+        <span class="glyphicon glyphicon-play"></span>
+    </button>
+    <hr />
+    <!-- dropdown -->
+    <h3>dropdown</h3>
+    <div class="dropdown">
+        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+            dropmenu
+            <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+            <li role="presentation" class="dropdown-header">first header</li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">item1</a></li>
+            <li role="presentation" class="divider"></li>
+            <li role="presentation" class="disabled"><a role="menuitem" tabindex="-1" href="#">item2</a></li>
+        </ul>
+    </div>
+    <hr />
+    <!-- row -->
+    <h3>row</h3>
+    <div class="row">
+        <div class="col-md-1">1</div>
+        <div class="col-md-1">1</div>
+        <div class="col-md-1">1</div>
+        <div class="col-md-1">1</div>
+    </div>
+    <hr />
+    <!-- icon -->
+    <h3>icon</h3>
+    <span class="glyphicon glyphicon-search"></span>
+    <span class="glyphicon glyphicon-plus"></span>
+    <hr />
+    <!-- image -->
+    <h3>image</h3>
+    <img class="img-rounded" alt="100x100" src="http://placehold.it/140x140">
+    <hr />
+    <!-- button-disabled -->
+    <h3>button-disabled</h3>
+    <button class="btn btn-primary btn-lg btn-block" type="button" disabled="disabled">button-disabled</button>
+    <hr />
+    <!-- button-block -->
+    <h3>button-block</h3>
+    <button class="btn btn-primary btn-lg btn-block" type="button">btn-block</button>
+    <hr />
+    <!-- button -->
+    <h3>button</h3>
+    <button class="btn btn-default" type="button">base button</button>
+    <button class="btn btn-primary" type="button">base button</button>
+    <hr />
+    <!-- help-block -->
+    <h3>help-block</h3>
+    <form role="form">
+        <div class="form-group has-success has-feedback">
+            <label class="control-label" for="inputSuccess1">success status</label>
+            <input type="text" class="form-control" id="inputSuccess1" placeholder="success status">
+            <span class="help-block">your input is right</span>
+            <span class="glyphicon glyphicon-ok form-control-feedback"></span>
+        </div>
+    </form>
+    <hr />
+    <!-- form: verified -->
+    <h3>form: verified</h3>
+    <div class="form-group has-error has-feedback">
+        <label class="control-label" for="inputError1">email address</label>
+        <input type="text" class="form-control" id="inputError1" placeholder="error status">
+        <span class="glyphicon glyphicon-remove form-control-feedback"></span>
+    </div>
+    <hr />
+    <!-- form: disabled -->
+    <h3>form: disabled</h3>
+    <div class="form-group">
+        <input class="form-control" type="text" placeholder="disabled,can't input" disabled>
+    </div>
+    <hr />
+    <!-- form focus -->
+    <h3>form: focus</h3>
+    <form role="form" class="form-horizontal">
+        <div class="form-group">
+            <!-- <div class="col-xs-6">
 				<input class="form-control input-lg" type="file" placeholder="focus">
 			</div> -->
-			<div class="col-xs-6">
-		      <input class="form-control input-lg" type="text" placeholder="focus">
-		    </div>
-		</div>
-	</form>
-	<hr />
-	<!-- radio-inline -->
-	<h3>radio-inline</h3>
-	<form role="form">
-		<label class="radio-inline">
-			<input type="radio" value="option1" name="sex">male
-		</label>
-		<label class="radio-inline">
-			<input type="radio" value="option2" name="sex">female
-		</label>
-		<label class="radio-inline">
-			<input type="radio" value="option3" name="sex">neutral
-		</label>
-	</form>
-	<hr />
-	<!-- checkbox -->
-	<h3>checkbox</h3>
-	<div class="checkbox">
-		<label>
-			<input type="checkbox" value="">remember password
-		</label>
-	</div>
-	<div class="radio">
-		<label>
-			<input type="radio" name="optionsRadios" id="optionsRadios1" value="love" checked>like
-		</label>
-	</div>
-	<div class="radio">
-		<label>
-			<input type="radio" name="optionsRadios" id="optionsRadios2" value="love" checked>unlike
-		</label>
-	</div>
-	<hr />
-	<!-- textarea -->
-	<p>textarea</p>
-	<form role="form">
-		<div class="form-group">
-			<textarea class="form-control" rows="3"></textarea>
-		</div>
-	</form>
-	<hr />
-	<!-- select -->
-	<p>select</p>
-	<form role="form">
-		<div class="form-group">
-			<select class="form-control">
-				<option>1</option>
-				<option>2</option>
-				<option>3</option>
-				<option>4</option>
-				<option>5</option>
-			</select>
-		</div>
-		<div class="form-group">
-			<select multiple class="form-control">
-				<option>1</option>
-				<option>2</option>
-				<option>3</option>
-				<option>4</option>
-				<option>5</option>
-			</select>
-		</div>
-	</form>
-	<hr />
-	<!-- form-control 2 -->
-	<p>form-control 2</p>
-	<form class="form-inline" role="form">
-		<div class="form-group">
-			<label for="exapleInputEmail1" class="col-sm-2 control-label">email:</label>
-			<div class="col-sm-10">
-		      <input type="email" class="form-control" id="inputEmail3" placeholder="pleae input email">
-		    </div>
-		</div>
-		<div class="form-group">
-			<label for="exapleInputPassword1" class="col-sm-2 control-label">password:</label>
-			<div class="col-sm-10">
-		      <input type="password" class="form-control" id="inputPassword3" placeholder="pleae input password">
-		    </div>
-		</div>
-		<div class="form-group">
-		    <div class="col-sm-offset-2 col-sm-10">
-		      <div class="checkbox">
-		        <label>
-		          <input type="checkbox"> remember password
-		        </label>
-		      </div>
-		    </div>
-		  </div>
-		<div class="form-group">
-    <div class="col-sm-offset-2 col-sm-10">
-      <button type="submit" class="btn btn-default">enter email</button>
+            <div class="col-xs-6">
+                <input class="form-control input-lg" type="text" placeholder="focus">
+            </div>
+        </div>
+    </form>
+    <hr />
+    <!-- radio-inline -->
+    <h3>radio-inline</h3>
+    <form role="form">
+        <label class="radio-inline">
+            <input type="radio" value="option1" name="sex">male
+        </label>
+        <label class="radio-inline">
+            <input type="radio" value="option2" name="sex">female
+        </label>
+        <label class="radio-inline">
+            <input type="radio" value="option3" name="sex">neutral
+        </label>
+    </form>
+    <hr />
+    <!-- checkbox -->
+    <h3>checkbox</h3>
+    <div class="checkbox">
+        <label>
+            <input type="checkbox" value="">remember password
+        </label>
     </div>
-  </div>
-	</form>
-	<hr />
-	<!-- form-control -->
-	<p>form-control</p>
-	<form>
-		<div class="form-group">
-			<label for="exapleInputEmail1">email:</label>
-			<input type="email" class="form-control" id="exampleInputEmail1" placeholder="pleae input email">
-		</div>
-		<div class="form-group">
-			<label for="exapleInputPassword1">password:</label>
-			<input type="password" class="form-control" id="exampleInputPassword1" placeholder="pleae input password">
-		</div>
-		<div class="checkbox">
-			<label>
-				<input type="checkbox">remember password
-			</label>
-		</div>
-		<button type="submit" class="btn btn-default">enter email</button>
-	</form>
-	<hr />
-	<!-- table -->
-	<p>table</p>
-	<table class="table table-striped table-bordered table-hover table-condensed">
-		<thead>
-			<tr>
-				<th>title1</th>
-				<th>title2</th>
-				<th>title3</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr class="success">
-				<td>content1</td>
-				<td>content2</td>
-				<td>content3</td>
-			</tr>
-			<tr class="info">
-				<td>content1</td>
-				<td>content2</td>
-				<td>content3</td>
-			</tr>
-		</tbody>
-	</table>
-	<hr />
-	<!-- 代码二 -->
-	<p>代码二</p>
-	<pre class="pre-scrollable">
+    <div class="radio">
+        <label>
+            <input type="radio" name="optionsRadios" id="optionsRadios1" value="love" checked>like
+        </label>
+    </div>
+    <div class="radio">
+        <label>
+            <input type="radio" name="optionsRadios" id="optionsRadios2" value="love" checked>unlike
+        </label>
+    </div>
+    <hr />
+    <!-- textarea -->
+    <p>textarea</p>
+    <form role="form">
+        <div class="form-group">
+            <textarea class="form-control" rows="3"></textarea>
+        </div>
+    </form>
+    <hr />
+    <!-- select -->
+    <p>select</p>
+    <form role="form">
+        <div class="form-group">
+            <select class="form-control">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <select multiple class="form-control">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+            </select>
+        </div>
+    </form>
+    <hr />
+    <!-- form-control 2 -->
+    <p>form-control 2</p>
+    <form class="form-inline" role="form">
+        <div class="form-group">
+            <label for="exapleInputEmail1" class="col-sm-2 control-label">email:</label>
+            <div class="col-sm-10">
+                <input type="email" class="form-control" id="inputEmail3" placeholder="pleae input email">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="exapleInputPassword1" class="col-sm-2 control-label">password:</label>
+            <div class="col-sm-10">
+                <input type="password" class="form-control" id="inputPassword3" placeholder="pleae input password">
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox"> remember password
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <button type="submit" class="btn btn-default">enter email</button>
+            </div>
+        </div>
+    </form>
+    <hr />
+    <!-- form-control -->
+    <p>form-control</p>
+    <form>
+        <div class="form-group">
+            <label for="exapleInputEmail1">email:</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="pleae input email">
+        </div>
+        <div class="form-group">
+            <label for="exapleInputPassword1">password:</label>
+            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="pleae input password">
+        </div>
+        <div class="checkbox">
+            <label>
+                <input type="checkbox">remember password
+            </label>
+        </div>
+        <button type="submit" class="btn btn-default">enter email</button>
+    </form>
+    <hr />
+    <!-- table -->
+    <p>table</p>
+    <table class="table table-striped table-bordered table-hover table-condensed">
+        <thead>
+            <tr>
+                <th>title1</th>
+                <th>title2</th>
+                <th>title3</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="success">
+                <td>content1</td>
+                <td>content2</td>
+                <td>content3</td>
+            </tr>
+            <tr class="info">
+                <td>content1</td>
+                <td>content2</td>
+                <td>content3</td>
+            </tr>
+        </tbody>
+    </table>
+    <hr />
+    <!-- 代码二 -->
+    <p>代码二</p>
+    <pre class="pre-scrollable">
 		<li>....</li>
 		<li>....</li>
 		<li>....</li>
@@ -512,67 +514,66 @@
 		<li>....</li>
 		<li>....</li>
 	</pre>
-	<hr />
-	<!-- 代码一 -->
-	<p>代码一</p>
-	<p>请使用<kbd>ctrl+x</kbd>复制代码，然后使用<kbd>ctrl+shift+v</kbd>将复制的代码粘贴到需要的地方。</p>
-	<hr />
-	<!-- 水平定义列表 -->
-	<p>水平定义列表</p>
-	<dl class="dl-horizontal">
-		<dt>标题一: </dt>
-		<dd>描述内容</dd>
-		<dt>标题二: </dt>
-		<dd>描述内容</dd>
-	</dl>
-	<hr />
-	定义列表
-	<dl>
-		<dt>北京</dt>
-		<dd>北京市中国的首都,是政治文化集中地</dd>
-		<dt>上海</dt>
-		<dd>上海号称东方的巴黎</dd>
-	</dl>
-	<hr />
-	内联列表
-<ul class="list-inline">
-    <li>W3cplus</li>
-    <li>Blog</li>
-    <li>CSS3</li>
-    <li>jQuery</li>
-    <li>PHP</li>
-</ul>
-城市:
-<ul class="list-inline">
-    <li>北京</li>
-    <li>上海</li>
-    <li>南京</li>
-    <li>厦门</li>
-</ul>
-
-<hr />
-列表
-<ol>
-    <li>有序项目列表一</li>
-    <li>有序项目列表二
-        <ol class="list-unstyled">
-        <li>有序二级项目列表一</li>
-        <li>有序二级项目列表二
-        	<ul>
-	        <li>无序三级项目列表一</li>
-	        <li>无序三级项目列表二
-	        	<ol class="list-unstyled">
-		        <li>无序四级项目列表一</li>
-		        <li>无序四级项目列表二</li>
-			    </ol>
-	        </li>
-	        <li>无序三级项目列表三</li>
-	        </ul>
+    <hr />
+    <!-- 代码一 -->
+    <p>代码一</p>
+    <p>请使用
+        <kbd>ctrl+x</kbd>复制代码，然后使用
+        <kbd>ctrl+shift+v</kbd>将复制的代码粘贴到需要的地方。</p>
+    <hr />
+    <!-- 水平定义列表 -->
+    <p>水平定义列表</p>
+    <dl class="dl-horizontal">
+        <dt>标题一: </dt>
+        <dd>描述内容</dd>
+        <dt>标题二: </dt>
+        <dd>描述内容</dd>
+    </dl>
+    <hr /> 定义列表
+    <dl>
+        <dt>北京</dt>
+        <dd>北京市中国的首都,是政治文化集中地</dd>
+        <dt>上海</dt>
+        <dd>上海号称东方的巴黎</dd>
+    </dl>
+    <hr /> 内联列表
+    <ul class="list-inline">
+        <li>W3cplus</li>
+        <li>Blog</li>
+        <li>CSS3</li>
+        <li>jQuery</li>
+        <li>PHP</li>
+    </ul>
+    城市:
+    <ul class="list-inline">
+        <li>北京</li>
+        <li>上海</li>
+        <li>南京</li>
+        <li>厦门</li>
+    </ul>
+    <hr /> 列表
+    <ol>
+        <li>有序项目列表一</li>
+        <li>有序项目列表二
+            <ol class="list-unstyled">
+                <li>有序二级项目列表一</li>
+                <li>有序二级项目列表二
+                    <ul>
+                        <li>无序三级项目列表一</li>
+                        <li>无序三级项目列表二
+                            <ol class="list-unstyled">
+                                <li>无序四级项目列表一</li>
+                                <li>无序四级项目列表二</li>
+                            </ol>
+                        </li>
+                        <li>无序三级项目列表三</li>
+                    </ul>
+                </li>
+                <li>有序二级项目列表三</li>
+            </ol>
         </li>
-        <li>有序二级项目列表三</li>
-        </ol>
-    </li>
-    <li>有序项目列表三</li>
-</ol>
+        <li>有序项目列表三</li>
+    </ol>
 </body>
+
 </html>
