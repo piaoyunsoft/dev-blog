@@ -2,191 +2,312 @@
 <html ng-app="app">
 
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=gbk" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no,minimal-ui">
     <meta name="format-detection" content="telephone=no">
     <link rel="stylesheet" type="text/css" href="css/reset.css">
     <style type="text/css">
-    	html {
-    		width: 100%;
-    		height: 100%;
-    		overflow-x: hidden;
-    	}
-		body {
-			text-align: left;
-			width: 100%;
-			overflow: hidden;
-			background: #e9dfc7;
-		}
-		.m-read-content {
-			font-size: 14px;
-			color: #555;
-			line-height: 31px;
-			padding: 15px;
-		}
-		.m-read-content h4 {
-			font-size: 20px;
-			color: #736357;
-			border-bottom: solid 1px #736357;
-			letter-spacing: 2px;
-			margin: 0 0 1em 0;
-		}
-		.m-read-content p {
-			text-indent: 2em;
-			margin: 0.5em 0;
-			letter-spacing: 0px;
-			line-height: 24px;
-		}
-		.u-tab {
-			height: 34px;
-			margin: 10px auto;
-			line-height: 34px;
-			border-radius: 8px;
-			border: 1px solid #858382;
-			font-size: 12px;
-			background: #000;
-			opacity: 0.9;
-		}
-		.u-tab li {
-			display: inline-block;
-			width: 49%;
-			border-right: 1px solid #858382;
-			text-align: center;
-			color: #fff;
-		}
-		.u-tab li:nth-child(2) {
-			border-right: none;
-		}
-		.m-button-bar {
-			width: 70%;
-			max-width: 800px;
-			padding: 5px;
-			margin: 0 auto;
-		}
-		.top-nav {
-			position: fixed;
-			top: 0px;
-			height: 50px;
-			width: 100%;
-			z-index: 9999;
-			background: #000;
-		}
-		.icon-back {
-			position: absolute;
-			top: 14px;
-			left: 10px;
-			width: 23px;
-			height: 23px;
-		}
-		.nav-title {
-			position: absolute;
-			top: 16px;
-			left: 16px;
-			left: 42px;
-			color: #d5d5d5;
-		}
-		.nav-pannel-bk {
-			position: fixed;
-			bottom: 70px;
-			height: 135px;
-			width: 100%;
-			background: #000;
-			opacity: 0.9;
-			z-index: 10000;
-		}
-		.nav-pannel {
-			position: fixed;
-			bottom: 70px;
-			height: 135px;
-			width: 100%;
-			background: none;
-			color: #fff;
-			z-index: 10001;
-		}
-		.child-mod {
-			padding: 5px 10px;
-			margin: 15px;
-		}
-		.child-mod span {
-			display: inline-block;
-			padding-right: 20px;
-			padding-left: 10px;
-		}
-		.font-size-button {
-			background: none;
-			border: 1px #8c8c8c solid;
-			color: #fff;
-			border-radius: 16px;
-			padding: 5px 40px;
-		}
-		.child-mod button:nth-child(2) {
-			margin-right: 10px;
-		}
-		.bk-container {
-			position: relative;
-			width: 30px;
-			height: 30px;
-			border-radius: 15px;
-			background: #fff;
-			display: inline-block;
-			vertical-align: -14px;
-		}
-		.bk-container-current {
-			position: absolute;
-			width: 32px;
-			height: 32px;
-			border-radius: 16px;
-			border: 1px #ff7800 solid;
-			top: -2px;
-			left: -2px;
-		}
+        html {
+            width: 100%;
+            height: 100%;
+            overflow-x: hidden;
+        }
+
+        body {
+            text-align: left;
+            width: 100%;
+            overflow: hidden;
+            background: #e9dfc7;
+        }
+
+        .m-read-content {
+            font-size: 14px;
+            color: #555;
+            line-height: 31px;
+            padding: 15px;
+        }
+
+        .m-read-content h4 {
+            font-size: 20px;
+            color: #736357;
+            border-bottom: solid 1px #736357;
+            letter-spacing: 2px;
+            margin: 0 0 1em 0;
+        }
+
+        .m-read-content p {
+            text-indent: 2em;
+            margin: 0.5em 0;
+            letter-spacing: 0px;
+            line-height: 24px;
+        }
+
+        .u-tab {
+            height: 34px;
+            margin: 10px auto;
+            line-height: 34px;
+            border-radius: 8px;
+            border: 1px solid #858382;
+            font-size: 12px;
+            background: #000;
+            opacity: 0.9;
+        }
+
+        .u-tab li {
+            display: inline-block;
+            width: 49%;
+            border-right: 1px solid #858382;
+            text-align: center;
+            color: #fff;
+        }
+
+        .u-tab li:nth-child(2) {
+            border-right: none;
+        }
+
+        .m-button-bar {
+            width: 70%;
+            max-width: 800px;
+            padding: 5px;
+            margin: 0 auto;
+        }
+
+        .top-nav {
+            position: fixed;
+            top: 0px;
+            height: 50px;
+            width: 100%;
+            z-index: 9999;
+            background: #000;
+        }
+
+        .icon-back {
+            position: absolute;
+            top: 14px;
+            left: 10px;
+            width: 23px;
+            height: 23px;
+        }
+
+        .nav-title {
+            position: absolute;
+            top: 16px;
+            left: 16px;
+            left: 42px;
+            color: #d5d5d5;
+        }
+
+        .nav-pannel-bk {
+            position: fixed;
+            bottom: 70px;
+            height: 135px;
+            width: 100%;
+            background: #000;
+            opacity: 0.9;
+            z-index: 10000;
+        }
+
+        .nav-pannel {
+            position: fixed;
+            bottom: 70px;
+            height: 135px;
+            width: 100%;
+            background: none;
+            color: #fff;
+            z-index: 10001;
+        }
+
+        .child-mod {
+            padding: 5px 10px;
+            margin: 15px;
+        }
+
+        .child-mod span {
+            display: inline-block;
+            padding-right: 20px;
+            padding-left: 10px;
+        }
+
+        .font-size-button {
+            background: none;
+            border: 1px #8c8c8c solid;
+            color: #fff;
+            border-radius: 16px;
+            padding: 5px 40px;
+        }
+
+        .child-mod button:nth-child(2) {
+            margin-right: 10px;
+        }
+
+        .bk-container {
+            position: relative;
+            width: 30px;
+            height: 30px;
+            border-radius: 15px;
+            background: #fff;
+            display: inline-block;
+            vertical-align: -14px;
+        }
+
+        .bk-container-current {
+            position: absolute;
+            width: 32px;
+            height: 32px;
+            border-radius: 16px;
+            border: 1px #ff7800 solid;
+            top: -2px;
+            left: -2px;
+        }
+        .artical-action-mid {
+            position: fixed;
+            z-index: 10002;
+            width: 100%;
+            height: 40%;
+            top: 30%;
+        }
+        /*.artical-action-bottom {
+            position: fixed;
+            z-index: 10002;
+            width: 100%;
+            height: 30%;
+            top: 70%;
+        }*/
     </style>
 </head>
 
 <body>
     <div id="root" class="container">
-    	<div id="top-nav" class="top-nav">
-    		<div class="icon-back"></div>
-    		<div class="nav-title">·µ»ØÊé¼Ü</div>
-    	</div>
+
+        <div class="m-artial-action">
+            <div class="artical-action-mid" id="action_mid"></div>
+            <div class="artical-action-bottom" id="action_bottom"></div>
+        </div>
+
+        <div id="top-nav" class="top-nav" style="display:none">
+            <div class="icon-back"></div>
+            <div class="nav-title">è¿”å›ä¹¦æ¶</div>
+        </div>
         <div id="fiction_chapter_title"></div>
         <div id="fiction_container" class="m-read-content">
-            <h4>ÄÜµÃÆß»Ê×ÓÇàÑÌ</h4>
-            <p>ÊÖÖĞ¶ÌÃ¬ÆÆ¿Õ·É³ö£¬²Á×ÅÒ»Ğ©Ê÷Ò¶£¬´©¹ıÈıÊ®ÓàÃ×¾àÀë£¬´ÓÒ°Â¹±³²¿±ßÔµÒ»²Á¶ø¹ı£¬¶øºóÔúÈëÑ©µØÉî´¦£¬½ö½öÔÚÒ°Â¹±³²¿ÁôÏÂÒ»µÀÑªºÛ£¬Ò°Â¹¶ÙÊ±¸ü¼ÓÆ´ÃüÅÜ£¬³¯É½ÁÖÉî´¦×êÈ¥£¬ÑÛ¿´×Å¾ÍÒªÅÜ¶ª¡£</p>
-            <p>Ê¯Í·»¯×÷Á÷¹â´©ĞĞÔÚÉ½ÁÖ¼ä£¬·É¹ıÉÏ°ÙÃ×¾àÀë£¬ÅéµÄÉù£¬¹á´©ÁËÒ»Öê´óÊ÷µÄÊ÷¸É£¬¾«×¼µÄÉäÈëÁËÄÇÍ·Ò°Â¹µÄÍ·Â­ÄÚ£¬ÄÇÒ°Â¹¼áÓ²µÄÍ·¹ÇÒ²µÖµ²²»×¡£¬õÔõÄ×Å¿¿×Å¹ßĞÔ·É±¼³öÊ®ÓàÃ×±ãºäÈ»µ¹µØ£¬ÕğµÄÖÜÎ§µÄÎŞÊı»ıÑ©óùóù¶øÂä¡£</p>
-            <p>Ò»ÃûÊÇÆÄÎª×³Ë¶µÄºÚ·¢ºÚÑÛÖĞÄêÄĞ×Ó£¬Éíºó±³¸º×ÅÒ»±øÆ÷Ïä¡£ÁíÍâÒ»µÀÉíÓ°È´ÊÇ¸ü¼Ó¿ıÎà×³Ë¶£¬¸ß¹ıÁ½Ã×£¬ÊÖ±Û±È³£ÈË´óÍÈ»¹´Ö£¬¿ÉËûÈ´ÓĞ×ÅÊ¨×Ó°ãµÄÄÔ´ü£¬ÕıÊÇÊ¨Ê×ÈËÇû£¡ÁèÂÒµÄ»ÆÉ«Í··¢ÅûÉ¢×Å£¬ÕâºÕÈ»±ãÊÇÆÄÎªÉÙ¼ûµÄÊŞÈËÖĞµÄ¡®Ê¨ÈË¡¯£¬ËûÍ¬Ñù±³×ÅÒ»±øÆ÷Ïä¡£</p>
-            <p>ÄĞ¾ôÊÇÏÄ×åµÛ¹ú¡®ÁúÉ½µÛ¹ú¡¯×îµÍµÄÒ»¸ö¹ó×å¾ôÎ»£¬ÔÚµÛ¹ú½¨¹úÊ±£¬¹ó×å¾ôÎ»ÊÚÓè»¹ºÜÑÏ¸ñ£¬Èç½ñµÛ¹ú½¨Á¢ÖÁ½ñÒÑ¾­¾ÅÇ§¶àÄê£¬Õâ¸öÅÓÈ»´óÎï¿ªÊ¼¸¯Ğà£¬Ò»Ğ©µÍ¾ôÎ»ÂòÂôÉõÖÁ¶¼ÊÇ¹Ù·½ÔÊĞí¡£</p>
-            <p>¶«²®ÁÒ¡¢Ê¨ÈË×³ºº´ø×ÅÄĞº¢Ñ©Ó¥×ßµ½ÁËÕâ×ùÉ½µÄ×î¸ß´¦£¬ÕâÀïÕıÓĞ×ÅĞ©´óÁ¿µÄÂíÆ¥ÒÔ¼°½ü°ÙÃûÊ¿±ø£¬Ò»Æ¬¿Õ¿õµÄÑ©µØÉÏÕıÆÌ×Å¾Ş´óµÄ°×É«Ã«Ìº£¬Ã«ÌºÉÏÕıÓĞ×ø×ÅÒ»ÃûÆøÏ¢ÉñÃØ³¬È»µÄ×ÏÅÛÅ®×Ó£¬×ÏÅÛÅ®×ÓµÄÉí±ßÊÇÒ»Ãû¿É°®µÄ±¼ÅÜ»¹õÔõÔõÄõÄµÄÁ½ÈıËêº¢Í¯£¬ÄÇĞ©Ê¿±øÃÇ¿´Ïò×ÏÅÛÅ®×ÓµÄÄ¿¹âÖĞÓĞ×Å¾´Î·¡£</p>
-            <p>ÊÖÖĞ¶ÌÃ¬ÆÆ¿Õ·É³ö£¬²Á×ÅÒ»Ğ©Ê÷Ò¶£¬´©¹ıÈıÊ®ÓàÃ×¾àÀë£¬´ÓÒ°Â¹±³²¿±ßÔµÒ»²Á¶ø¹ı£¬¶øºóÔúÈëÑ©µØÉî´¦£¬½ö½öÔÚÒ°Â¹±³²¿ÁôÏÂÒ»µÀÑªºÛ£¬Ò°Â¹¶ÙÊ±¸ü¼ÓÆ´ÃüÅÜ£¬³¯É½ÁÖÉî´¦×êÈ¥£¬ÑÛ¿´×Å¾ÍÒªÅÜ¶ª¡£</p>
-            <p>Ê¯Í·»¯×÷Á÷¹â´©ĞĞÔÚÉ½ÁÖ¼ä£¬·É¹ıÉÏ°ÙÃ×¾àÀë£¬ÅéµÄÉù£¬¹á´©ÁËÒ»Öê´óÊ÷µÄÊ÷¸É£¬¾«×¼µÄÉäÈëÁËÄÇÍ·Ò°Â¹µÄÍ·Â­ÄÚ£¬ÄÇÒ°Â¹¼áÓ²µÄÍ·¹ÇÒ²µÖµ²²»×¡£¬õÔõÄ×Å¿¿×Å¹ßĞÔ·É±¼³öÊ®ÓàÃ×±ãºäÈ»µ¹µØ£¬ÕğµÄÖÜÎ§µÄÎŞÊı»ıÑ©óùóù¶øÂä¡£</p>
+            <h4>èƒ½å¾—ä¸ƒçš‡å­é’çƒŸ</h4>
+            <p>æ‰‹ä¸­çŸ­çŸ›ç ´ç©ºé£å‡ºï¼Œæ“¦ç€ä¸€äº›æ ‘å¶ï¼Œç©¿è¿‡ä¸‰åä½™ç±³è·ç¦»ï¼Œä»é‡é¹¿èƒŒéƒ¨è¾¹ç¼˜ä¸€æ“¦è€Œè¿‡ï¼Œè€Œåæ‰å…¥é›ªåœ°æ·±å¤„ï¼Œä»…ä»…åœ¨é‡é¹¿èƒŒéƒ¨ç•™ä¸‹ä¸€é“è¡€ç—•ï¼Œé‡é¹¿é¡¿æ—¶æ›´åŠ æ‹¼å‘½è·‘ï¼Œæœå±±æ—æ·±å¤„é’»å»ï¼Œçœ¼çœ‹ç€å°±è¦è·‘ä¸¢ã€‚</p>
+            <p>çŸ³å¤´åŒ–ä½œæµå…‰ç©¿è¡Œåœ¨å±±æ—é—´ï¼Œé£è¿‡ä¸Šç™¾ç±³è·ç¦»ï¼Œç °çš„å£°ï¼Œè´¯ç©¿äº†ä¸€æ ªå¤§æ ‘çš„æ ‘å¹²ï¼Œç²¾å‡†çš„å°„å…¥äº†é‚£å¤´é‡é¹¿çš„å¤´é¢…å†…ï¼Œé‚£é‡é¹¿åšç¡¬çš„å¤´éª¨ä¹ŸæŠµæŒ¡ä¸ä½ï¼Œè¸‰è·„ç€é ç€æƒ¯æ€§é£å¥”å‡ºåä½™ç±³ä¾¿è½°ç„¶å€’åœ°ï¼Œéœ‡çš„å‘¨å›´çš„æ— æ•°ç§¯é›ªç°Œç°Œè€Œè½ã€‚</p>
+            <p>ä¸€åæ˜¯é¢‡ä¸ºå£®ç¡•çš„é»‘å‘é»‘çœ¼ä¸­å¹´ç”·å­ï¼Œèº«åèƒŒè´Ÿç€ä¸€å…µå™¨ç®±ã€‚å¦å¤–ä¸€é“èº«å½±å´æ˜¯æ›´åŠ é­æ¢§å£®ç¡•ï¼Œé«˜è¿‡ä¸¤ç±³ï¼Œæ‰‹è‡‚æ¯”å¸¸äººå¤§è…¿è¿˜ç²—ï¼Œå¯ä»–å´æœ‰ç€ç‹®å­èˆ¬çš„è„‘è¢‹ï¼Œæ­£æ˜¯ç‹®é¦–äººèº¯ï¼å‡Œä¹±çš„é»„è‰²å¤´å‘æŠ«æ•£ç€ï¼Œè¿™èµ«ç„¶ä¾¿æ˜¯é¢‡ä¸ºå°‘è§çš„å…½äººä¸­çš„â€˜ç‹®äººâ€™ï¼Œä»–åŒæ ·èƒŒç€ä¸€å…µå™¨ç®±ã€‚</p>
+            <p>ç”·çˆµæ˜¯å¤æ—å¸å›½â€˜é¾™å±±å¸å›½â€™æœ€ä½çš„ä¸€ä¸ªè´µæ—çˆµä½ï¼Œåœ¨å¸å›½å»ºå›½æ—¶ï¼Œè´µæ—çˆµä½æˆäºˆè¿˜å¾ˆä¸¥æ ¼ï¼Œå¦‚ä»Šå¸å›½å»ºç«‹è‡³ä»Šå·²ç»ä¹åƒå¤šå¹´ï¼Œè¿™ä¸ªåºç„¶å¤§ç‰©å¼€å§‹è…æœ½ï¼Œä¸€äº›ä½çˆµä½ä¹°å–ç”šè‡³éƒ½æ˜¯å®˜æ–¹å…è®¸ã€‚</p>
+            <p>ä¸œä¼¯çƒˆã€ç‹®äººå£®æ±‰å¸¦ç€ç”·å­©é›ªé¹°èµ°åˆ°äº†è¿™åº§å±±çš„æœ€é«˜å¤„ï¼Œè¿™é‡Œæ­£æœ‰ç€äº›å¤§é‡çš„é©¬åŒ¹ä»¥åŠè¿‘ç™¾åå£«å…µï¼Œä¸€ç‰‡ç©ºæ—·çš„é›ªåœ°ä¸Šæ­£é“ºç€å·¨å¤§çš„ç™½è‰²æ¯›æ¯¯ï¼Œæ¯›æ¯¯ä¸Šæ­£æœ‰åç€ä¸€åæ°”æ¯ç¥ç§˜è¶…ç„¶çš„ç´«è¢å¥³å­ï¼Œç´«è¢å¥³å­çš„èº«è¾¹æ˜¯ä¸€åå¯çˆ±çš„å¥”è·‘è¿˜è¸‰è¸‰è·„è·„çš„ä¸¤ä¸‰å²å­©ç«¥ï¼Œé‚£äº›å£«å…µä»¬çœ‹å‘ç´«è¢å¥³å­çš„ç›®å…‰ä¸­æœ‰ç€æ•¬ç•ã€‚</p>
+            <p>æ‰‹ä¸­çŸ­çŸ›ç ´ç©ºé£å‡ºï¼Œæ“¦ç€ä¸€äº›æ ‘å¶ï¼Œç©¿è¿‡ä¸‰åä½™ç±³è·ç¦»ï¼Œä»é‡é¹¿èƒŒéƒ¨è¾¹ç¼˜ä¸€æ“¦è€Œè¿‡ï¼Œè€Œåæ‰å…¥é›ªåœ°æ·±å¤„ï¼Œä»…ä»…åœ¨é‡é¹¿èƒŒéƒ¨ç•™ä¸‹ä¸€é“è¡€ç—•ï¼Œé‡é¹¿é¡¿æ—¶æ›´åŠ æ‹¼å‘½è·‘ï¼Œæœå±±æ—æ·±å¤„é’»å»ï¼Œçœ¼çœ‹ç€å°±è¦è·‘ä¸¢ã€‚</p>
+            <p>çŸ³å¤´åŒ–ä½œæµå…‰ç©¿è¡Œåœ¨å±±æ—é—´ï¼Œé£è¿‡ä¸Šç™¾ç±³è·ç¦»ï¼Œç °çš„å£°ï¼Œè´¯ç©¿äº†ä¸€æ ªå¤§æ ‘çš„æ ‘å¹²ï¼Œç²¾å‡†çš„å°„å…¥äº†é‚£å¤´é‡é¹¿çš„å¤´é¢…å†…ï¼Œé‚£é‡é¹¿åšç¡¬çš„å¤´éª¨ä¹ŸæŠµæŒ¡ä¸ä½ï¼Œè¸‰è·„ç€é ç€æƒ¯æ€§é£å¥”å‡ºåä½™ç±³ä¾¿è½°ç„¶å€’åœ°ï¼Œéœ‡çš„å‘¨å›´çš„æ— æ•°ç§¯é›ªç°Œç°Œè€Œè½ã€‚</p>
         </div>
         <div class="m-button-bar">
             <ul class="u-tab">
-                <li id="prev_button">ÉÏÒ»ÕÂ</li>
-                <li id="next_button">ÏÂÒ»ÕÂ</li>
+                <li id="prev_button">ä¸Šä¸€ç« </li>
+                <li id="next_button">ä¸‹ä¸€ç« </li>
             </ul>
         </div>
-        <div class="nav-pannel-bk"></div>
-        <div class="nav-pannel" id="font-container">
-			<div class="child-mod">
-				<span>×ÖºÅ</span>
-				<button id="large-font" class="font-size-button">´ó</button>
-				<button id="small-font" class="font-size-button">Ğ¡</button>
-			</div>
-			<div class="child-mod">
-				<span>±³¾°</span>
-				<div class="bk-container">
-					<div class="bk-container-current"></div>
-				</div>
-			</div>
+        <div class="nav-pannel-bk" style="display:none"></div>
+        <div class="nav-pannel" id="font-container" style="display:none">
+            <div class="child-mod">
+                <span>å­—å·</span>
+                <button id="large-font" class="font-size-button">å¤§</button>
+                <button id="small-font" class="font-size-button">å°</button>
+            </div>
+            <div class="child-mod">
+                <span>èƒŒæ™¯</span>
+                <div class="bk-container">
+                    <div class="bk-container-current"></div>
+                </div>
+            </div>
         </div>
     </div>
+
     <script src="lib/zepto.min.js"></script>
     <script>
-    window.jQuery = $;
+        window.jQuery = $;
     </script>
     <script src="js/jquery.base64.js"></script>
     <script src="js/jquery.jsonp.js"></script>
-</body>
+    <script>
+        (function() {
+            var Util = (function() {
+                var prefix = 'html5_reader_';
+                var StorageGetter = function(key) {
+                    return localStorage.getItem(prefix + key);
+                }
+                var StorageSetter = function(key, val) {
+                    return localStorage.setItem(prefix + key,val);
+                }
+                return {
+                    StorageSetter:StorageSetter,
+                    StorageGetter:StorageGetter
+                }
+            })();
+            var Dom = {
+                top_nav :$('#top-nav'),
+                nav_pannel_bk:$('.nav-pannel-bk'),
+                nav_pannel:$('.nav-pannel')
+            }
+            var Win = $(window);
+            var Doc = $(document);
+            var RootContainer = $('#fiction_container');
+            var initFontSize = Util.StorageGetter('font_size');
+            initFontSize = parseInt(initFontSize);
+            if (!initFontSize) {
+                initFontSize = 14;
+            }
+            RootContainer.css('font-size', initFontSize);
 
+            function main() {
+                // todo æ•´ä¸ªé¡¹ç›®çš„å…¥å£å‡½æ•°
+                EventHandler();
+            }
+            function ReaderModel() {
+                // todo å®ç°å’Œé˜…è¯»å™¨ç›¸å…³çš„æ•°æ®äº¤äº’çš„æ–¹æ³•
+            }
+            function ReaderBaseFrame() {
+                // todo æ¸²æŸ“åŸºæœ¬çš„UIç»“æ„
+            }
+            function EventHandler() {
+                // todo äº¤äº’çš„äº‹ä»¶ç»‘å®š
+                $('#action_mid').click(function() {
+                    if (Dom.top_nav.css('display') == 'none') {
+                        Dom.top_nav.show();
+                        Dom.nav_pannel_bk.show();
+                        Dom.nav_pannel.show();
+                    } else {
+                        Dom.top_nav.hide();
+                        Dom.nav_pannel_bk.hide();
+                        Dom.nav_pannel.hide();
+                    }
+                });
+                $('#action_bottom').click(function() {
+                    // todo è§¦å‘èƒŒæ™¯åˆ‡æ¢æ—¶é—´
+                    RootContainer.css('background', '#fff');
+                });
+                $('#large-font').click(function() {
+                    if (initFontSize > 20) {
+                        return;
+                    }
+                    initFontSize += 1;
+                    RootContainer.css('font-size', initFontSize);
+                    Util.StorageSetter('font_size', initFontSize);
+                });
+                $('#small-font').click(function() {
+                    if (initFontSize < 9) {
+                        return;
+                    }
+                    initFontSize -= 1;
+                    RootContainer.css('font-size', initFontSize);
+                    Util.StorageSetter('font_size', initFontSize);
+                });
+                Win.scroll(function() {
+                    Dom.top_nav.hide();
+                    Dom.nav_pannel_bk.hide();
+                    Dom.nav_pannel.hide();
+                });
+            }
+            main();
+        })();
+    </script>
+</body>
 </html>

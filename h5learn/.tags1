@@ -1,0 +1,54 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	0	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+html	/Users/xueyingwu/Desktop/github/dev-blog/h5learn/webreader/index.html	/^<html ng-app="app">$/;"	function	line:2
+head	/Users/xueyingwu/Desktop/github/dev-blog/h5learn/webreader/index.html	/^<head>$/;"	function	line:4
+meta	/Users/xueyingwu/Desktop/github/dev-blog/h5learn/webreader/index.html	/^    <meta http-equiv="Content-Type" content="text\/html; charset=utf-8" \/>$/;"	function	line:5
+meta	/Users/xueyingwu/Desktop/github/dev-blog/h5learn/webreader/index.html	/^    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no,minimal-ui">$/;"	function	line:6
+meta	/Users/xueyingwu/Desktop/github/dev-blog/h5learn/webreader/index.html	/^    <meta name="format-detection" content="telephone=no">$/;"	function	line:7
+link	/Users/xueyingwu/Desktop/github/dev-blog/h5learn/webreader/index.html	/^    <link rel="stylesheet" type="text\/css" href="css\/reset.css">$/;"	function	line:8
+style	/Users/xueyingwu/Desktop/github/dev-blog/h5learn/webreader/index.html	/^    <style type="text\/css">$/;"	function	line:9
+body	/Users/xueyingwu/Desktop/github/dev-blog/h5learn/webreader/index.html	/^<body>$/;"	function	line:179
+div	/Users/xueyingwu/Desktop/github/dev-blog/h5learn/webreader/index.html	/^    <div id="root" class="container">$/;"	function	line:180
+div	/Users/xueyingwu/Desktop/github/dev-blog/h5learn/webreader/index.html	/^        <div class="m-artial-action">$/;"	function	line:182
+div	/Users/xueyingwu/Desktop/github/dev-blog/h5learn/webreader/index.html	/^            <div class="artical-action-mid" id="action_mid"><\/div>$/;"	function	line:183
+div	/Users/xueyingwu/Desktop/github/dev-blog/h5learn/webreader/index.html	/^            <div class="artical-action-bottom" id="action_bottom"><\/div>$/;"	function	line:184
+div	/Users/xueyingwu/Desktop/github/dev-blog/h5learn/webreader/index.html	/^        <div id="top-nav" class="top-nav" style="display:none">$/;"	function	line:187
+div	/Users/xueyingwu/Desktop/github/dev-blog/h5learn/webreader/index.html	/^            <div class="icon-back"><\/div>$/;"	function	line:188
+div	/Users/xueyingwu/Desktop/github/dev-blog/h5learn/webreader/index.html	/^            <div class="nav-title">返回书架<\/div>$/;"	function	line:189
+div	/Users/xueyingwu/Desktop/github/dev-blog/h5learn/webreader/index.html	/^        <div id="fiction_chapter_title"><\/div>$/;"	function	line:191
+div	/Users/xueyingwu/Desktop/github/dev-blog/h5learn/webreader/index.html	/^        <div id="fiction_container" class="m-read-content">$/;"	function	line:192
+h	/Users/xueyingwu/Desktop/github/dev-blog/h5learn/webreader/index.html	/^            <h4>能得七皇子青烟<\/h4>$/;"	function	line:193
+p	/Users/xueyingwu/Desktop/github/dev-blog/h5learn/webreader/index.html	/^            <p>手中短矛破空飞出，擦着一些树叶，穿过三十余米距离，从野鹿背部边缘一擦而过，而后扎入雪地深处，仅仅在野鹿背部留下一道血痕，野鹿顿时更加拼命跑，朝山林深处钻去，眼看着就要跑丢。<\/p>$/;"	function	line:194
+p	/Users/xueyingwu/Desktop/github/dev-blog/h5learn/webreader/index.html	/^            <p>石头化作流光穿行在山林间，飞过上百米距离，砰的声，贯穿了一株大树的树干，精准的射入了那头野鹿的头颅内，那野鹿坚硬的头骨也抵挡不住，踉跄着靠着惯性飞奔出十余米便轰然倒地，震的周围的无数积雪簌簌而落。<\/p>$/;"	function	line:195
+p	/Users/xueyingwu/Desktop/github/dev-blog/h5learn/webreader/index.html	/^            <p>一名是颇为壮硕的黑发黑眼中年男子，身后背负着一兵器箱。另外一道身影却是更加魁梧壮硕，高过两米，手臂比常人大腿还粗，可他却有着狮子般的脑袋，正是狮首人躯！凌乱的黄色头发披散着，这赫然便是颇为少见的兽人中的‘狮人’，他同样背着一兵器箱。<\/p>$/;"	function	line:196
+p	/Users/xueyingwu/Desktop/github/dev-blog/h5learn/webreader/index.html	/^            <p>男爵是夏族帝国‘龙山帝国’最低的一个贵族爵位，在帝国建国时，贵族爵位授予还很严格，如今帝国建立至今已经九千多年，这个庞然大物开始腐朽，一些低爵位买卖甚至都是官方允许。<\/p>$/;"	function	line:197
+p	/Users/xueyingwu/Desktop/github/dev-blog/h5learn/webreader/index.html	/^            <p>东伯烈、狮人壮汉带着男孩雪鹰走到了这座山的最高处，这里正有着些大量的马匹以及近百名士兵，一片空旷的雪地上正铺着巨大的白色毛毯，毛毯上正有坐着一名气息神秘超然的紫袍女子，紫袍女子的身边是一名可爱的奔跑还踉踉跄跄的两三岁孩童，那些士兵们看向紫袍女子的目光中有着敬畏。<\/p>$/;"	function	line:198
+p	/Users/xueyingwu/Desktop/github/dev-blog/h5learn/webreader/index.html	/^            <p>手中短矛破空飞出，擦着一些树叶，穿过三十余米距离，从野鹿背部边缘一擦而过，而后扎入雪地深处，仅仅在野鹿背部留下一道血痕，野鹿顿时更加拼命跑，朝山林深处钻去，眼看着就要跑丢。<\/p>$/;"	function	line:199
+p	/Users/xueyingwu/Desktop/github/dev-blog/h5learn/webreader/index.html	/^            <p>石头化作流光穿行在山林间，飞过上百米距离，砰的声，贯穿了一株大树的树干，精准的射入了那头野鹿的头颅内，那野鹿坚硬的头骨也抵挡不住，踉跄着靠着惯性飞奔出十余米便轰然倒地，震的周围的无数积雪簌簌而落。<\/p>$/;"	function	line:200
+div	/Users/xueyingwu/Desktop/github/dev-blog/h5learn/webreader/index.html	/^        <div class="m-button-bar">$/;"	function	line:202
+ul	/Users/xueyingwu/Desktop/github/dev-blog/h5learn/webreader/index.html	/^            <ul class="u-tab">$/;"	function	line:203
+li	/Users/xueyingwu/Desktop/github/dev-blog/h5learn/webreader/index.html	/^                <li id="prev_button">上一章<\/li>$/;"	function	line:204
+li	/Users/xueyingwu/Desktop/github/dev-blog/h5learn/webreader/index.html	/^                <li id="next_button">下一章<\/li>$/;"	function	line:205
+div	/Users/xueyingwu/Desktop/github/dev-blog/h5learn/webreader/index.html	/^        <div class="nav-pannel-bk" style="display:none"><\/div>$/;"	function	line:208
+div	/Users/xueyingwu/Desktop/github/dev-blog/h5learn/webreader/index.html	/^        <div class="nav-pannel" id="font-container" style="display:none">$/;"	function	line:209
+div	/Users/xueyingwu/Desktop/github/dev-blog/h5learn/webreader/index.html	/^            <div class="child-mod">$/;"	function	line:210
+span	/Users/xueyingwu/Desktop/github/dev-blog/h5learn/webreader/index.html	/^                <span>字号<\/span>$/;"	function	line:211
+button	/Users/xueyingwu/Desktop/github/dev-blog/h5learn/webreader/index.html	/^                <button id="large-font" class="font-size-button">大<\/button>$/;"	function	line:212
+button	/Users/xueyingwu/Desktop/github/dev-blog/h5learn/webreader/index.html	/^                <button id="small-font" class="font-size-button">小<\/button>$/;"	function	line:213
+div	/Users/xueyingwu/Desktop/github/dev-blog/h5learn/webreader/index.html	/^            <div class="child-mod">$/;"	function	line:215
+span	/Users/xueyingwu/Desktop/github/dev-blog/h5learn/webreader/index.html	/^                <span>背景<\/span>$/;"	function	line:216
+div	/Users/xueyingwu/Desktop/github/dev-blog/h5learn/webreader/index.html	/^                <div class="bk-container">$/;"	function	line:217
+div	/Users/xueyingwu/Desktop/github/dev-blog/h5learn/webreader/index.html	/^                    <div class="bk-container-current"><\/div>$/;"	function	line:218
+script	/Users/xueyingwu/Desktop/github/dev-blog/h5learn/webreader/index.html	/^    <script src="lib\/zepto.min.js"><\/script>$/;"	function	line:224
+script	/Users/xueyingwu/Desktop/github/dev-blog/h5learn/webreader/index.html	/^    <script>$/;"	function	line:225
+script	/Users/xueyingwu/Desktop/github/dev-blog/h5learn/webreader/index.html	/^    <script src="js\/jquery.base64.js"><\/script>$/;"	function	line:228
+script	/Users/xueyingwu/Desktop/github/dev-blog/h5learn/webreader/index.html	/^    <script src="js\/jquery.jsonp.js"><\/script>$/;"	function	line:229
+script	/Users/xueyingwu/Desktop/github/dev-blog/h5learn/webreader/index.html	/^    <script>$/;"	function	line:230
+main	/Users/xueyingwu/Desktop/github/dev-blog/h5learn/webreader/index.html	/^            function main() {$/;"	function	line:260
+ReaderModel	/Users/xueyingwu/Desktop/github/dev-blog/h5learn/webreader/index.html	/^            function ReaderModel() {$/;"	function	line:264
+ReaderBaseFrame	/Users/xueyingwu/Desktop/github/dev-blog/h5learn/webreader/index.html	/^            function ReaderBaseFrame() {$/;"	function	line:267
+EventHandler	/Users/xueyingwu/Desktop/github/dev-blog/h5learn/webreader/index.html	/^            function EventHandler() {$/;"	function	line:270
