@@ -159,6 +159,7 @@
             top: -2px;
             left: -2px;
         }
+
         .artical-action-mid {
             position: fixed;
             z-index: 10002;
@@ -190,14 +191,7 @@
         </div>
         <div id="fiction_chapter_title"></div>
         <div id="fiction_container" class="m-read-content">
-            <h4>能得七皇子青烟</h4>
-            <p>手中短矛破空飞出，擦着一些树叶，穿过三十余米距离，从野鹿背部边缘一擦而过，而后扎入雪地深处，仅仅在野鹿背部留下一道血痕，野鹿顿时更加拼命跑，朝山林深处钻去，眼看着就要跑丢。</p>
-            <p>石头化作流光穿行在山林间，飞过上百米距离，砰的声，贯穿了一株大树的树干，精准的射入了那头野鹿的头颅内，那野鹿坚硬的头骨也抵挡不住，踉跄着靠着惯性飞奔出十余米便轰然倒地，震的周围的无数积雪簌簌而落。</p>
-            <p>一名是颇为壮硕的黑发黑眼中年男子，身后背负着一兵器箱。另外一道身影却是更加魁梧壮硕，高过两米，手臂比常人大腿还粗，可他却有着狮子般的脑袋，正是狮首人躯！凌乱的黄色头发披散着，这赫然便是颇为少见的兽人中的‘狮人’，他同样背着一兵器箱。</p>
-            <p>男爵是夏族帝国‘龙山帝国’最低的一个贵族爵位，在帝国建国时，贵族爵位授予还很严格，如今帝国建立至今已经九千多年，这个庞然大物开始腐朽，一些低爵位买卖甚至都是官方允许。</p>
-            <p>东伯烈、狮人壮汉带着男孩雪鹰走到了这座山的最高处，这里正有着些大量的马匹以及近百名士兵，一片空旷的雪地上正铺着巨大的白色毛毯，毛毯上正有坐着一名气息神秘超然的紫袍女子，紫袍女子的身边是一名可爱的奔跑还踉踉跄跄的两三岁孩童，那些士兵们看向紫袍女子的目光中有着敬畏。</p>
-            <p>手中短矛破空飞出，擦着一些树叶，穿过三十余米距离，从野鹿背部边缘一擦而过，而后扎入雪地深处，仅仅在野鹿背部留下一道血痕，野鹿顿时更加拼命跑，朝山林深处钻去，眼看着就要跑丢。</p>
-            <p>石头化作流光穿行在山林间，飞过上百米距离，砰的声，贯穿了一株大树的树干，精准的射入了那头野鹿的头颅内，那野鹿坚硬的头骨也抵挡不住，踉跄着靠着惯性飞奔出十余米便轰然倒地，震的周围的无数积雪簌簌而落。</p>
+
         </div>
         <div class="m-button-bar">
             <ul class="u-tab">
@@ -235,20 +229,35 @@
                     return localStorage.getItem(prefix + key);
                 }
                 var StorageSetter = function(key, val) {
-                    return localStorage.setItem(prefix + key,val);
+                    return localStorage.setItem(prefix + key, val);
+                }
+                var getJSONP = function(url, callback) {
+                    return $.jsonp({
+                        url: url,
+                        cache: true,
+                        callback: 'duokan_fiction_chapter',
+                        success: function(result) {
+                            var data = $.base64.decode(result);
+                            var json = decodeURIComponent(escape(data));
+                            callback(json);
+                        }
+                    })
                 }
                 return {
-                    StorageSetter:StorageSetter,
-                    StorageGetter:StorageGetter
+                    getJSONP: getJSONP,
+                    StorageSetter: StorageSetter,
+                    StorageGetter: StorageGetter
                 }
             })();
             var Dom = {
-                top_nav :$('#top-nav'),
-                nav_pannel_bk:$('.nav-pannel-bk'),
-                nav_pannel:$('.nav-pannel')
+                top_nav: $('#top-nav'),
+                nav_pannel_bk: $('.nav-pannel-bk'),
+                nav_pannel: $('.nav-pannel')
             }
             var Win = $(window);
             var Doc = $(document);
+            var readerModel;
+            var readerUI;
             var RootContainer = $('#fiction_container');
             var initFontSize = Util.StorageGetter('font_size');
             initFontSize = parseInt(initFontSize);
@@ -259,14 +268,80 @@
 
             function main() {
                 // todo 整个项目的入口函数
+                readerModel = ReaderModel();
+                readerUI = ReaderBaseFrame(RootContainer);
+                readerModel.init(function(data) {
+                    readerUI(data);
+                });
                 EventHandler();
             }
+
             function ReaderModel() {
                 // todo 实现和阅读器相关的数据交互的方法
+                var Chapter_id;
+                var ChapterTotal;
+                var init = function(UIcallback) {
+                    getFictionInfo(function() {
+                        getCurChapterContent(Chapter_id, function(data) {
+                            // todo
+                            UIcallback && UIcallback(data);
+                        });
+                    })
+                }
+                var getFictionInfo = function(callback) {
+                    $.get('data/chapter.json', function(data) {
+                        // todo 获取章节信息之后的回调
+                        Chapter_id = data.chapters[1].chapter_id;
+                        ChapterTotal = data.chapters.length;
+                        callback && callback();
+                    }, 'json');
+                }
+                var getCurChapterContent = function(chapter_id, callback) {
+                    $.get('data/data' + chapter_id + '.json', function(data) {
+                        var url = data.jsonp;
+                        Util.getJSONP(url, function(data) {
+                            callback && callback(data);
+                        });
+                    }, 'json');
+                }
+                var prevChapter = function(UIcallback) {
+                    Chapter_id = parseInt(Chapter_id, 10);
+                    if (Chapter_id == 0) {
+                        return;
+                    }
+                    Chapter_id -= 1;
+                    getCurChapterContent(Chapter_id, UIcallback);
+                }
+                var nextChapter = function(UIcallback) {
+                    Chapter_id = parseInt(Chapter_id, 10);
+                    if (Chapter_id == ChapterTotal) {
+                        return;
+                    }
+                    Chapter_id += 1;
+                    getCurChapterContent(Chapter_id, UIcallback);
+                }
+                return {
+                    init : init,
+                    prevChapter : prevChapter,
+                    nextChapter : nextChapter
+                }
             }
+
             function ReaderBaseFrame() {
                 // todo 渲染基本的UI结构
+                function parseChapterData(jsonData) {
+                    var jsonObj = JSON.parse(jsonData);
+                    var html = '<h4>' + jsonObj.t + '</h4>';
+                    for (var i = 0; i < jsonObj.p.length; i++) {
+                        html += '<p>' + jsonObj.p[i] + '</p>';
+                    }
+                    return html;
+                }
+                return function(data) {
+                    RootContainer.html(parseChapterData(data));
+                }
             }
+
             function EventHandler() {
                 // todo 交互的事件绑定
                 $('#action_mid').click(function() {
@@ -305,9 +380,21 @@
                     Dom.nav_pannel_bk.hide();
                     Dom.nav_pannel.hide();
                 });
+
+                $('#prev_button').click(function() {
+                    readerModel.prevChapter(function(data) {
+                        readerUI(data);
+                    });
+                });
+                $('#next_button').click(function() {
+                    readerModel.nextChapter(function(data) {
+                        readerUI(data);
+                    });
+                });
             }
             main();
         })();
     </script>
 </body>
+
 </html>
