@@ -1,0 +1,17 @@
+{
+  "uploadOnSave": true,
+  "useAtomicWrites": true,
+  "deleteLocal": false,
+  "hostname": "123.206.65.101",
+  "target": "/var/www/html/wechatappserver/",
+  "ignore": [
+    ".remote-sync.json",
+    ".svn/**",
+    ".git/**",
+    ".vscode/**"
+  ],
+  "username": "ubuntu",
+  "watch": [],
+  "transport": "scp",
+  "password": "qqlottery16"
+}
