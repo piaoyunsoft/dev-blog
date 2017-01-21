@@ -1,5 +1,5 @@
 <?php
 $memberInfo = array(
-      "name" => "xueyingwu");
+  "name" => "xueyingwu");
 echo json_encode($memberInfo);
 ?>
